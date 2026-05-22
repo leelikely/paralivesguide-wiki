@@ -31,16 +31,31 @@
             }
         }
     </script>
+
+    <style>
+        .mobile-menu-enter {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.25s ease;
+        }
+        .mobile-menu-open {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
 
     <!-- ====== HEADER / NAVIGATION ====== -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
         <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight">
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight shrink-0">
                 <span class="text-3xl">🎮</span>
                 <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span>
             </a>
+
+            <!-- Desktop Nav Links -->
             <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
                 <a href="/" class="hover:text-terracotta transition">Home</a>
                 <a href="#" class="hover:text-terracotta transition">Guides</a>
@@ -49,12 +64,32 @@
                 <a href="#" class="hover:text-terracotta transition">Careers</a>
                 <a href="about.html" class="hover:text-terracotta transition">About</a>
             </div>
-            <button class="md:hidden text-2xl p-1" aria-label="Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl p-2 -mr-2 rounded-lg hover:bg-amber-50 transition" aria-label="Open menu" aria-expanded="false">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </nav>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="mobile-menu-enter md:hidden">
+            <div class="px-4 py-4 space-y-1 bg-white border-t border-amber-100/40">
+                <a href="/" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Home</a>
+                <a href="#" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 Guides</a>
+                <a href="#" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Build Mode</a>
+                <a href="#" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">👤 Characters</a>
+                <a href="#" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">💼 Careers</a>
+                <hr class="border-amber-100/40 my-2">
+                <a href="about.html" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 About</a>
+                <a href="privacy-policy.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">🔒 Privacy Policy</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-xl font-semibold bg-terracotta/10 text-terracotta transition">📬 Contact</a>
+            </div>
+        </div>
     </header>
 
     <!-- ====== MAIN CONTENT ====== -->
@@ -175,6 +210,66 @@
             </div>
         </div>
     </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+        (function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            let isOpen = false;
+
+            function openMenu() {
+                isOpen = true;
+                mobileMenu.classList.remove('mobile-menu-enter');
+                mobileMenu.classList.add('mobile-menu-open');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuBtn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                isOpen = false;
+                mobileMenu.classList.remove('mobile-menu-open');
+                mobileMenu.classList.add('mobile-menu-enter');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+
+            menuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (isOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    closeMenu();
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && isOpen) {
+                    closeMenu();
+                }
+            });
+        })();
+    </script>
 
 </body>
 </html>
