@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started: Creating Your First Para — ParalivesGuide.wiki</title>
+    <meta name="description" content="A step-by-step walkthrough of the Paralives character creator — traits, appearance, backstory, and tips for making your first Para truly yours.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Getting Started: Creating Your First Para — ParalivesGuide.wiki">
+    <meta property="og:description" content="A step-by-step walkthrough of the Paralives character creator — traits, appearance, backstory, and tips for making your first Para.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://paralivesguide.wiki/articles/getting-started-your-first-para.html">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Getting Started: Creating Your First Para",
+        "description": "A step-by-step walkthrough of the Paralives character creator — traits, appearance, backstory, and tips for making your first Para truly yours.",
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-01-15",
+        "author": { "@type": "Person", "name": "ParalivesGuide Team" },
+        "publisher": { "@type": "Organization", "name": "ParalivesGuide.wiki" }
+    }
+    </script>
+
+    <!-- Schema.org Breadcrumb -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://paralivesguide.wiki/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://paralivesguide.wiki/guides.html" },
+            { "@type": "ListItem", "position": 3, "name": "Getting Started: Your First Para", "item": "https://paralivesguide.wiki/articles/getting-started-your-first-para.html" }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'cream':      '#fdf6ec',
+                        'warm-brown': '#5c4033',
+                        'terracotta': '#d4845f',
+                        'soft-teal':  '#7dabab',
+                        'golden':     '#e8c56d',
+                        'card':       '#fffdf7',
+                        'muted':      '#8b7e74',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .mobile-menu-enter {
+            max-height: 0; opacity: 0; overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.25s ease;
+        }
+        .mobile-menu-open { max-height: 500px; opacity: 1; }
+
+        /* Article Prose */
+        .prose h2 {
+            font-size: 1.5rem; font-weight: 800; margin-top: 2.25rem; margin-bottom: 0.75rem;
+            color: #5c4033; padding-top: 0.5rem; border-top: 2px solid #fdf6ec;
+        }
+        .prose h3 {
+            font-size: 1.2rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #5c4033;
+        }
+        .prose p { margin-bottom: 1.15rem; line-height: 1.85; }
+        .prose ul, .prose ol { margin-bottom: 1.15rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.4rem; line-height: 1.75; }
+        .prose ul li { list-style-type: disc; }
+        .prose ol li { list-style-type: decimal; }
+        .prose strong { color: #5c4033; font-weight: 700; }
+        .prose a { color: #d4845f; text-decoration: underline; font-weight: 600; }
+        .prose a:hover { color: #b06545; }
+        .prose blockquote {
+            border-left: 4px solid #e8c56d; padding: 0.75rem 1.25rem; margin: 1.5rem 0;
+            background: #fef9ef; border-radius: 0 0.75rem 0.75rem 0; font-style: italic; color: #6b5a4e;
+        }
+        .prose .tip-box {
+            background: #eef7f5; border-left: 4px solid #7dabab; padding: 1rem 1.25rem;
+            margin: 1.5rem 0; border-radius: 0 0.75rem 0.75rem 0;
+        }
+        .prose .tip-box strong { color: #5c8a8a; }
+
+        /* TOC active */
+        .toc-link.active { color: #d4845f; font-weight: 700; }
+    </style>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
+
+    <!-- ====== HEADER / NAVIGATION ====== -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight shrink-0">
+                <span class="text-3xl">🎮</span>
+                <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
+                <a href="/" class="hover:text-terracotta transition">Home</a>
+                <a href="../guides.html" class="text-terracotta transition border-b-2 border-terracotta pb-1">Guides</a>
+                <a href="../guides.html#build-mode" class="hover:text-terracotta transition">Build Mode</a>
+                <a href="../guides.html#characters" class="hover:text-terracotta transition">Characters</a>
+                <a href="../guides.html#careers" class="hover:text-terracotta transition">Careers</a>
+                <a href="../about.html" class="hover:text-terracotta transition">About</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl p-2 -mr-2 rounded-lg hover:bg-amber-50 transition" aria-label="Open menu" aria-expanded="false">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-enter md:hidden">
+            <div class="px-4 py-4 space-y-1 bg-white border-t border-amber-100/40">
+                <a href="/" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Home</a>
+                <a href="../guides.html" class="block px-4 py-3 rounded-xl font-semibold bg-terracotta/10 text-terracotta transition">📖 All Guides</a>
+                <a href="../guides.html#build-mode" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Build Mode</a>
+                <a href="../guides.html#characters" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">👤 Characters</a>
+                <a href="../guides.html#careers" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">💼 Careers</a>
+                <hr class="border-amber-100/40 my-2">
+                <a href="../about.html" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 About</a>
+                <a href="../privacy-policy.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">🔒 Privacy Policy</a>
+                <a href="../contact.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">📬 Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main class="flex-1">
+
+        <!-- Breadcrumb -->
+        <div class="max-w-4xl mx-auto px-4 pt-4 pb-0">
+            <nav class="text-xs text-muted/70 flex flex-wrap items-center gap-1.5 py-3" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-terracotta transition">Home</a>
+                <span>/</span>
+                <a href="../guides.html" class="hover:text-terracotta transition">Guides</a>
+                <span>/</span>
+                <span class="text-warm-brown font-semibold">Getting Started: Your First Para</span>
+            </nav>
+        </div>
+
+        <!-- Article Layout: TOC Sidebar + Content -->
+        <div class="max-w-6xl mx-auto px-4 pb-16">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+                <!-- ===== SIDEBAR: Table of Contents ===== -->
+                <aside class="hidden lg:block w-56 shrink-0">
+                    <div class="sticky top-24">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-muted/60 mb-3">On This Page</h4>
+                        <nav class="space-y-1.5 text-sm" id="toc">
+                            <a href="#overview" class="toc-link block py-1 text-muted hover:text-terracotta transition">Overview</a>
+                            <a href="#before-you-begin" class="toc-link block py-1 text-muted hover:text-terracotta transition">Before You Begin</a>
+                            <a href="#step-1-basics" class="toc-link block py-1 text-muted hover:text-terracotta transition">Step 1: Name & Basics</a>
+                            <a href="#step-2-appearance" class="toc-link block py-1 text-muted hover:text-terracotta transition">Step 2: Appearance</a>
+                            <a href="#step-3-traits" class="toc-link block py-1 text-muted hover:text-terracotta transition">Step 3: Traits</a>
+                            <a href="#step-4-backstory" class="toc-link block py-1 text-muted hover:text-terracotta transition">Step 4: Backstory</a>
+                            <a href="#step-5-finalize" class="toc-link block py-1 text-muted hover:text-terracotta transition">Step 5: Finalize</a>
+                            <a href="#common-mistakes" class="toc-link block py-1 text-muted hover:text-terracotta transition">Common Mistakes</a>
+                            <a href="#whats-next" class="toc-link block py-1 text-muted hover:text-terracotta transition">What's Next?</a>
+                        </nav>
+
+                        <!-- Ad placeholder -->
+                        <div class="mt-8 p-4 bg-amber-50/50 rounded-xl border border-amber-100/40 text-center">
+                            <p class="text-xs text-muted/50">— Ad —</p>
+                            <div class="h-40 bg-amber-100/30 rounded-lg mt-2 flex items-center justify-center text-xs text-muted/40">Ad Space</div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- ===== ARTICLE CONTENT ===== -->
+                <article class="flex-1 min-w-0 max-w-3xl">
+
+                    <!-- Article Header -->
+                    <header class="mb-8">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="text-xs font-semibold text-soft-teal bg-soft-teal/10 px-3 py-1 rounded-full">Beginner</span>
+                            <span class="text-xs text-muted/60">👤 Character Creation</span>
+                            <span class="text-xs text-muted/60">⏱️ 8 min read</span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+                            Getting Started: Creating Your First Para
+                        </h1>
+                        <p class="text-lg text-muted leading-relaxed">
+                            Everything you need to know about the Paralives character creator — from traits and appearance to backstories and hidden customization tricks.
+                        </p>
+                        <div class="flex items-center gap-3 mt-5 text-xs text-muted/60">
+                            <span>📅 Published: January 15, 2026</span>
+                            <span>·</span>
+                            <span>🔄 Updated: January 15, 2026</span>
+                        </div>
+                    </header>
+
+                    <!-- Prose Content -->
+                    <div class="prose text-muted">
+
+                        <!-- Overview -->
+                        <h2 id="overview">Overview</h2>
+                        <p>
+                            So you just fired up Paralives for the first time. The main menu music is playing, the logo's sitting there all cozy on your screen, and you're about to click "New Game." Then it hits you — <strong>you're about to create your very first Para.</strong>
+                        </p>
+                        <p>
+                            No pressure, right? 😅
+                        </p>
+                        <p>
+                            Here's the thing: the Paralives character creator is <strong>surprisingly deep</strong>. It's not just about picking a hairstyle and calling it a day. You've got traits that actually affect gameplay, backstories that influence how other Paras react to you, and an appearance system that lets you tweak things down to ridiculous detail.
+                        </p>
+                        <p>
+                            This guide walks you through the entire process, step by step. By the end, you'll have a Para that feels like <em>yours</em> — and you'll understand all the choices you made along the way.
+                        </p>
+
+                        <div class="tip-box">
+                            <strong>💡 Tip:</strong> Don't stress about making the "perfect" Para on your first try. Paralives lets you adjust almost everything later in-game (except traits — those are permanent unless you use a mod). Think of your first character as a learning experience!
+                        </div>
+
+                        <!-- Before You Begin -->
+                        <h2 id="before-you-begin">Before You Begin</h2>
+                        <p>
+                            Before you even open the character creator, take a second to think about <strong>what kind of story</strong> you want to play. Are you looking for a chaotic, drama-filled household? A quiet, creative solo life? A rags-to-riches career grind?
+                        </p>
+                        <p>
+                            Your answer will guide pretty much every decision in the creator. Trust me — having a rough idea upfront saves you from staring at the trait screen for 20 minutes (speaking from experience here).
+                        </p>
+                        <p>Here are a few starter concepts to get your brain going:</p>
+                        <ul>
+                            <li><strong>The Ambitious Newcomer:</strong> Moves to town with nothing but big dreams. Pick career-focused traits.</li>
+                            <li><strong>The Social Butterfly:</strong> Wants to befriend everyone. Prioritize charisma and social traits.</li>
+                            <li><strong>The Creative Loner:</strong> Lives for art, music, or crafting. Prefers solitude.</li>
+                            <li><strong>The Chaotic Wildcard:</strong> Unpredictable traits, random backstory. Let the game surprise you.</li>
+                        </ul>
+
+                        <!-- Step 1 -->
+                        <h2 id="step-1-basics">Step 1: Name &amp; Basics</h2>
+                        <p>
+                            First screen you'll see: the basics panel. Name, gender presentation, pronouns, age — the straightforward stuff. But even here there are a few things worth knowing.
+                        </p>
+                        <h3>Naming Your Para</h3>
+                        <p>
+                            Paralives gives you a <strong>first name, last name, and optional nickname</strong>. The nickname is what actually shows up above your Para's head in-game, so pick something you're happy to stare at for hours. You can change it later, but it's nice to get it right from the start.
+                        </p>
+                        <p>
+                            One thing I wish I'd known earlier: other Paras will <em>use your full name in formal situations</em> (like job interviews or meeting the mayor). So if you name your character something like "Bartholomew Fizzlebottom III," be prepared for NPCs to say it out loud with a straight face.
+                        </p>
+                        <h3>Life Stage</h3>
+                        <p>
+                            You can start as a <strong>Young Adult, Adult, or Elder</strong>. Toddlers, children, and teens aren't available as "starting" Paras — they have to be born or adopted into an existing household. Most players start as a Young Adult (gives you the most time to develop skills and relationships).
+                        </p>
+
+                        <!-- Step 2 -->
+                        <h2 id="step-2-appearance">Step 2: Appearance &amp; Customization</h2>
+                        <p>
+                            This is where Paralives really flexes. The appearance editor is <strong>ridiculously detailed</strong> — you can adjust everything from ear shape to the exact shade of your Para's eyebrows.
+                        </p>
+                        <h3>The Basics</h3>
+                        <p>
+                            Start with a preset if you're feeling overwhelmed. There are about 30 base presets covering different looks, body types, and styles. Pick one that's in the ballpark of what you want, then tweak from there.
+                        </p>
+                        <h3>Body Customization</h3>
+                        <p>
+                            Paralives uses a <strong>slider-free system</strong> — you click and drag directly on body parts to adjust them. Want broader shoulders? Grab the shoulder area and pull. Thinner waist? Same deal. It's more intuitive than traditional sliders once you get used to it, but it can feel a little weird for the first few minutes.
+                        </p>
+                        <h3>Face &amp; Hair</h3>
+                        <p>
+                            The face editor works the same way — drag to adjust features. There's also a "symmetry lock" toggle (on by default) that mirrors changes to both sides of the face. <strong>Turn it off if you want asymmetrical details</strong> (like a crooked smile or one eyebrow slightly raised — small things that add a ton of personality).
+                        </p>
+                        <p>
+                            Hair options are plentiful, with separate slots for <strong>base hair, bangs/fringe, and accessories</strong>. Mix and match! And yes, there are natural hair texture options across the full spectrum.
+                        </p>
+                        <h3>Clothing</h3>
+                        <p>
+                            You'll set <strong>five outfit categories</strong>: Everyday, Formal, Sleep, Athletic, and Swimwear. For now, just focus on Everyday — you can fill in the rest later. The clothing catalog is sorted by style (Modern, Vintage, Eclectic, etc.), which makes it easier to find pieces that go together.
+                        </p>
+
+                        <div class="tip-box">
+                            <strong>💡 Tip:</strong> Hit the "Randomize" button a few times even if you plan to customize everything manually. Sometimes the randomizer throws together combos you'd never think of — and they actually look amazing. I found my favorite Para's entire aesthetic this way.
+                        </div>
+
+                        <!-- Step 3 -->
+                        <h2 id="step-3-traits">Step 3: Choosing Your Traits</h2>
+                        <p>
+                            Okay, here's where things get <strong>gameplay-meaningful</strong>. Traits aren't just flavor text in Paralives — they directly affect:
+                        </p>
+                        <ul>
+                            <li>How your Para gains or loses mood</li>
+                            <li>Which social interactions are available</li>
+                            <li>Career performance in certain jobs</li>
+                            <li>How quickly skills level up</li>
+                            <li>Autonomous behaviors (what your Para does when you're not controlling them)</li>
+                        </ul>
+                        <p>You pick <strong>3 traits</strong> from a list of about 40. They're divided into categories:</p>
+                        <ul>
+                            <li><strong>Personality:</strong> Cheerful, Gloomy, Hot-Headed, Creative, Genius, etc.</li>
+                            <li><strong>Social:</strong> Outgoing, Loner, Romantic, Flirty, etc.</li>
+                            <li><strong>Lifestyle:</strong> Active, Lazy, Neat, Messy, Foodie, etc.</li>
+                            <li><strong>Quirks:</strong> Clumsy, Lucky, Perfectionist, Sarcastic, etc.</li>
+                        </ul>
+                        <h3>My Recommended Starter Combo</h3>
+                        <p>
+                            If you're new to life sims (or just want a smooth first experience), try this:
+                        </p>
+                        <ul>
+                            <li><strong>Cheerful</strong> — Easier mood management. Your Para bounces back from negative events faster.</li>
+                            <li><strong>Creative</strong> — Boosts painting, writing, and music skill gains. Lots of fun career options.</li>
+                            <li><strong>Foodie</strong> — Makes cooking more rewarding and unlocks special social interactions around meals. Plus, watching your Para get genuinely excited about a well-made dinner is just... wholesome.</li>
+                        </ul>
+                        <p>
+                            Avoid traits like <strong>Hot-Headed</strong> or <strong>Gloomy</strong> for your first run — they're totally playable and can lead to great stories, but they add extra challenge to mood management that can be frustrating when you're still learning the basics.
+                        </p>
+
+                        <!-- Step 4 -->
+                        <h2 id="step-4-backstory">Step 4: Setting a Backstory (Optional but Worth It)</h2>
+                        <p>
+                            The backstory section is <strong>completely optional</strong>, but I honestly think it's one of the coolest features in the creator. You get a text box where you can write a short history for your Para — where they grew up, what their childhood was like, key life events, whatever you want.
+                        </p>
+                        <p>
+                            Here's why it matters: <strong>other Paras will reference your backstory in conversations.</strong> The game picks up on keywords and generates contextual dialogue. If you write that your Para "grew up on a farm," NPCs might ask them about country life. If you mention "won the lottery," you might get different reactions from materialistic characters.
+                        </p>
+                        <p>
+                            You don't need to write a novel. Two or three sentences is plenty. Here's an example:
+                        </p>
+                        <blockquote>
+                            <p>"Maya grew up in a small coastal town, the youngest of four siblings. She spent her childhood drawing sea creatures and dreaming of becoming a marine biologist. After saving up for years, she's finally moved to the city to pursue her dream — with nothing but a suitcase, a sketchbook, and a slightly unhealthy obsession with cephalopods."</p>
+                        </blockquote>
+                        <p>
+                            See? Quick, evocative, and gives the game plenty to work with. Plus, it helps <em>you</em> connect with your character before you even start playing.
+                        </p>
+
+                        <!-- Step 5 -->
+                        <h2 id="step-5-finalize">Step 5: Review &amp; Finalize</h2>
+                        <p>
+                            Last step! The review screen shows you a summary of everything you've chosen. Take a second to double-check:
+                        </p>
+                        <ul>
+                            <li>✅ Traits look right? (Remember: <strong>permanent</strong> without mods!)</li>
+                            <li>✅ Backstory doesn't have any embarrassing typos?</li>
+                            <li>✅ You're happy with the overall vibe?</li>
+                        </ul>
+                        <p>
+                            If everything looks good, hit "Create Para" and congratulations — you've just made your first Para! 🎉
+                        </p>
+
+                        <!-- Common Mistakes -->
+                        <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+                        <p>
+                            I've watched a lot of friends create their first Paras, and these are the most common slip-ups:
+                        </p>
+                        <ol>
+                            <li><strong>Picking contradictory traits.</strong> "Loner" + "Outgoing" is a classic. The game lets you do it, but your Para will constantly be fighting themselves. Pick a lane.</li>
+                            <li><strong>Ignoring the backstory.</strong> It takes 2 minutes and makes the world feel so much more responsive. Just write something!</li>
+                            <li><strong>Spending 3 hours in the appearance editor.</strong> Look, I get it. But you can change appearance later. <em>Go play the game.</em></li>
+                            <li><strong>Starting as an Elder.</strong> Totally valid for roleplay, but you'll have less time to explore skills and careers. Save this for a second playthrough.</li>
+                            <li><strong>Forgetting to set all outfit categories.</strong> Your Para will autonomously change into situation-appropriate clothing. If you didn't set Formal wear, they'll show up to a wedding in their pajamas. Hilarious, but maybe not the vibe you wanted.</li>
+                        </ol>
+
+                        <!-- What's Next -->
+                        <h2 id="whats-next">What's Next?</h2>
+                        <p>
+                            Now that your Para is ready, it's time to find them a home! Head over to our <strong>Build Mode guide</strong> (coming soon) to learn how to create the perfect house — or if you're eager to jump straight into gameplay, check out the guides below.
+                        </p>
+                        <p>
+                            And hey — if you make a Para you're proud of, we'd love to hear about it. Drop us a message via the <a href="../contact.html">Contact page</a> and tell us about your character!
+                        </p>
+
+                    </div><!-- /prose -->
+
+                    <!-- Article Footer Meta -->
+                    <div class="mt-10 pt-6 border-t border-amber-100/60 text-xs text-muted/60 space-y-1">
+                        <p><strong>Category:</strong> <a href="../guides.html#getting-started" class="text-terracotta hover:underline">Getting Started</a></p>
+                        <p><strong>Tags:</strong> character creation, beginner, traits, customization, backstory</p>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <section class="max-w-4xl mx-auto px-4 pb-16">
+            <h2 class="text-xl font-bold mb-5 border-t border-amber-100/60 pt-8">📖 Related Guides</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="../guides.html#build-mode" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3">
+                    <span class="text-3xl">🏠</span>
+                    <div>
+                        <h3 class="font-bold text-sm group-hover:text-terracotta transition">Build Mode: The Complete Basics</h3>
+                        <p class="text-xs text-muted mt-1">Coming May 2026</p>
+                    </div>
+                </a>
+                <a href="../guides.html#careers" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3">
+                    <span class="text-3xl">💼</span>
+                    <div>
+                        <h3 class="font-bold text-sm group-hover:text-terracotta transition">Career Paths & Skill Trees</h3>
+                        <p class="text-xs text-muted mt-1">Coming May 2026</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-xl font-extrabold">
+                        <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span>
+                    </span>
+                    <p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="/" class="hover:text-terracotta transition">Home</a></li>
+                        <li><a href="../guides.html" class="hover:text-terracotta transition">All Guides</a></li>
+                        <li><a href="../about.html" class="hover:text-terracotta transition">About This Site</a></li>
+                        <li><a href="../privacy-policy.html" class="hover:text-terracotta transition">Privacy Policy</a></li>
+                        <li><a href="../contact.html" class="hover:text-terracotta transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Disclaimer</h4>
+                    <p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p>
+                </div>
+            </div>
+            <div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70">
+                <p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+        (function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            let isOpen = false;
+
+            function openMenu() {
+                isOpen = true;
+                mobileMenu.classList.remove('mobile-menu-enter');
+                mobileMenu.classList.add('mobile-menu-open');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuBtn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                isOpen = false;
+                mobileMenu.classList.remove('mobile-menu-open');
+                mobileMenu.classList.add('mobile-menu-enter');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+
+            menuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (isOpen) { closeMenu(); } else { openMenu(); }
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() { closeMenu(); });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) { closeMenu(); }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && isOpen) { closeMenu(); }
+            });
+
+            // TOC active state on scroll
+            (function() {
+                var tocLinks = document.querySelectorAll('.toc-link');
+                var sections = [];
+                tocLinks.forEach(function(link) {
+                    var id = link.getAttribute('href').replace('#', '');
+                    var el = document.getElementById(id);
+                    if (el) sections.push({ link: link, top: el.offsetTop - 120 });
+                });
+                function updateToc() {
+                    var scrollY = window.scrollY;
+                    sections.forEach(function(item, i) {
+                        var next = sections[i + 1];
+                        if (scrollY >= item.top && (!next || scrollY < next.top)) {
+                            tocLinks.forEach(function(l) { l.classList.remove('active'); });
+                            item.link.classList.add('active');
+                        }
+                    });
+                }
+                window.addEventListener('scroll', updateToc, { passive: true });
+            })();
+        })();
+    </script>
+
+</body>
+</html>

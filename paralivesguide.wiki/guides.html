@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Guides — ParalivesGuide.wiki</title>
+    <meta name="description" content="Browse all Paralives guides by category — character creation, build mode, careers, relationships, modding, and more.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'cream':      '#fdf6ec',
+                        'warm-brown': '#5c4033',
+                        'terracotta': '#d4845f',
+                        'soft-teal':  '#7dabab',
+                        'golden':     '#e8c56d',
+                        'card':       '#fffdf7',
+                        'muted':      '#8b7e74',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .mobile-menu-enter {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.25s ease;
+        }
+        .mobile-menu-open {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
+
+    <!-- ====== HEADER / NAVIGATION ====== -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight shrink-0">
+                <span class="text-3xl">🎮</span>
+                <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
+                <a href="/" class="hover:text-terracotta transition">Home</a>
+                <a href="guides.html" class="text-terracotta transition border-b-2 border-terracotta pb-1">Guides</a>
+                <a href="guides.html#build-mode" class="hover:text-terracotta transition">Build Mode</a>
+                <a href="guides.html#characters" class="hover:text-terracotta transition">Characters</a>
+                <a href="guides.html#careers" class="hover:text-terracotta transition">Careers</a>
+                <a href="about.html" class="hover:text-terracotta transition">About</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl p-2 -mr-2 rounded-lg hover:bg-amber-50 transition" aria-label="Open menu" aria-expanded="false">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="mobile-menu-enter md:hidden">
+            <div class="px-4 py-4 space-y-1 bg-white border-t border-amber-100/40">
+                <a href="/" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Home</a>
+                <a href="guides.html" class="block px-4 py-3 rounded-xl font-semibold bg-terracotta/10 text-terracotta transition">📖 All Guides</a>
+                <a href="guides.html#build-mode" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Build Mode</a>
+                <a href="guides.html#characters" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">👤 Characters</a>
+                <a href="guides.html#careers" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">💼 Careers</a>
+                <hr class="border-amber-100/40 my-2">
+                <a href="about.html" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 About</a>
+                <a href="privacy-policy.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">🔒 Privacy Policy</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">📬 Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main class="flex-1">
+
+        <!-- Hero -->
+        <section class="max-w-6xl mx-auto px-4 pt-14 pb-6 md:pt-24 md:pb-10 text-center">
+            <span class="text-5xl md:text-6xl block mb-4">📚</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Paralives Guides &amp; Walkthroughs</h1>
+            <p class="text-muted text-base md:text-lg max-w-xl mx-auto">Every guide we've written, organized by topic. Pick a category and dive in — whether you're brand new or looking to master the details.</p>
+        </section>
+
+        <!-- ====== SECTION: Getting Started ====== -->
+        <section class="max-w-6xl mx-auto px-4 pb-14" id="getting-started">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl">🌱</span>
+                <h2 class="text-2xl md:text-3xl font-bold">Getting Started</h2>
+                <span class="text-xs font-semibold text-soft-teal bg-soft-teal/10 px-3 py-1 rounded-full ml-auto">Beginner Friendly</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Article 1 — REAL LINK -->
+                <a href="articles/getting-started-your-first-para.html" class="group bg-card rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100/60 hover:border-terracotta/30 block">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">👤</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 group-hover:text-terracotta transition">Getting Started: Your First Para</h3>
+                            <p class="text-muted text-sm leading-relaxed line-clamp-2">Everything you need to know about the character creator — traits, appearance, and finding your style.</p>
+                            <span class="inline-block mt-2 text-xs text-soft-teal font-semibold">Read guide →</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Placeholder 1 -->
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🎮</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Game Settings & Controls Overview</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Camera controls, UI layout, accessibility options, and performance settings explained.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Placeholder 2 -->
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🗺️</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Exploring the World: Neighborhoods & Lots</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">A tour of every neighborhood, how lots work, and where to find hidden collectibles.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECTION: Build Mode ====== -->
+        <section class="max-w-6xl mx-auto px-4 pb-14" id="build-mode">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl">🏠</span>
+                <h2 class="text-2xl md:text-3xl font-bold">Build Mode</h2>
+                <span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full ml-auto">All Levels</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🧱</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Build Mode: The Complete Basics</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Walls, roofs, windows, floors — every building tool explained step by step.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🪴</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Furniture & Decoration Guide</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Every furniture category, style matching tips, and how to make rooms feel alive.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🌳</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Outdoor & Landscaping Masterclass</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Gardens, patios, pools, terrain tools — create stunning outdoor spaces.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECTION: Characters & Life ====== -->
+        <section class="max-w-6xl mx-auto px-4 pb-14" id="characters">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl">👤</span>
+                <h2 class="text-2xl md:text-3xl font-bold">Characters &amp; Life</h2>
+                <span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full ml-auto">Intermediate</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🎭</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Personality Traits: The Complete List</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Every trait, how they interact, hidden trait combos, and best picks for beginners.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">📅</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Daily Life & Routine Management</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Needs, schedules, hobbies, and keeping your Para happy day after day.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">👶</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Life Stages & Aging Explained</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">From toddler to elder — how each life stage works and what changes.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECTION: Careers & Skills ====== -->
+        <section class="max-w-6xl mx-auto px-4 pb-14" id="careers">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl">💼</span>
+                <h2 class="text-2xl md:text-3xl font-bold">Careers &amp; Skills</h2>
+                <span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full ml-auto">Intermediate</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">📊</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Career Paths & Skill Trees Overview</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Every career ranked — salary, requirements, promotions, and skill synergies.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">💰</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Making Money: Side Hustles & Passive Income</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Freelancing, crafting to sell, investments — every way to earn simoleons.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">📚</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Skill Leveling: Fastest Methods</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Optimal strategies for leveling every skill with minimal grinding.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECTION: Relationships ====== -->
+        <section class="max-w-6xl mx-auto px-4 pb-14" id="relationships">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl">💕</span>
+                <h2 class="text-2xl md:text-3xl font-bold">Relationships &amp; Social</h2>
+                <span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full ml-auto">Intermediate</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">💕</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Relationships & Social System Deep-Dive</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Friendships, romance, rivalries, family bonds — every social mechanic explained.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">💍</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Dating, Marriage & Starting a Family</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">How to find the right partner, propose, plan a wedding, and raise kids.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">👥</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Group Dynamics & Community Events</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Clubs, parties, festivals, and how group interactions affect relationships.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECTION: Modding ====== -->
+        <section class="max-w-6xl mx-auto px-4 pb-14" id="modding">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl">🎨</span>
+                <h2 class="text-2xl md:text-3xl font-bold">Modding &amp; Custom Content</h2>
+                <span class="text-xs font-semibold bg-terracotta/10 text-terracotta px-3 py-1 rounded-full ml-auto">Advanced</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🔧</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Custom Content & Modding 101</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">How modding works, Steam Workshop, installing CC safely, and recommended tools.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">🖌️</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Creating Your Own CC: Beginner's Guide</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Tools, file formats, and a step-by-step tutorial for making your first custom item.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card/60 rounded-2xl p-5 border border-amber-100/40 border-dashed opacity-70">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl shrink-0">📦</span>
+                        <div>
+                            <h3 class="font-bold text-base mb-1 text-muted">Best Mods & CC: Community Picks</h3>
+                            <p class="text-muted/60 text-sm leading-relaxed line-clamp-2">Curated list of must-have mods and custom content from the community.</p>
+                            <span class="inline-block mt-2 text-xs text-muted/50">Coming May 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="max-w-3xl mx-auto px-4 pb-20 text-center">
+            <div class="bg-gradient-to-br from-terracotta/10 to-golden/10 rounded-2xl p-8 border border-terracotta/20">
+                <span class="text-5xl block mb-4">💬</span>
+                <h3 class="text-xl font-bold mb-2">Can't Find What You Need?</h3>
+                <p class="text-muted mb-5">We're building out more guides every week. If there's a topic you'd love to see covered, drop us a message!</p>
+                <a href="contact.html" class="inline-flex items-center gap-2 bg-terracotta text-white px-6 py-3 rounded-full font-bold hover:bg-[#c07455] transition shadow-lg shadow-terracotta/25">
+                    📬 Suggest a Guide
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-xl font-extrabold">
+                        <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span>
+                    </span>
+                    <p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="/" class="hover:text-terracotta transition">Home</a></li>
+                        <li><a href="guides.html" class="hover:text-terracotta transition">All Guides</a></li>
+                        <li><a href="about.html" class="hover:text-terracotta transition">About This Site</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-terracotta transition">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="hover:text-terracotta transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Disclaimer</h4>
+                    <p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p>
+                </div>
+            </div>
+            <div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70">
+                <p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+        (function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            let isOpen = false;
+
+            function openMenu() {
+                isOpen = true;
+                mobileMenu.classList.remove('mobile-menu-enter');
+                mobileMenu.classList.add('mobile-menu-open');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuBtn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                isOpen = false;
+                mobileMenu.classList.remove('mobile-menu-open');
+                mobileMenu.classList.add('mobile-menu-enter');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+
+            menuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (isOpen) { closeMenu(); } else { openMenu(); }
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() { closeMenu(); });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) { closeMenu(); }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && isOpen) { closeMenu(); }
+            });
+
+            // Smooth scroll for anchor links on this page
+            document.querySelectorAll('a[href^="guides.html#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    var hash = this.getAttribute('href').split('#')[1];
+                    var target = document.getElementById(hash);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        history.pushState(null, '', '#' + hash);
+                    }
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
