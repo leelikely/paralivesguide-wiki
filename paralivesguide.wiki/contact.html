@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — ParalivesGuide.wiki</title>
+    <meta name="description" content="Get in touch with ParalivesGuide.wiki — questions, suggestions, corrections, or advertising inquiries.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'cream':      '#fdf6ec',
+                        'warm-brown': '#5c4033',
+                        'terracotta': '#d4845f',
+                        'soft-teal':  '#7dabab',
+                        'golden':     '#e8c56d',
+                        'card':       '#fffdf7',
+                        'muted':      '#8b7e74',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
+
+    <!-- ====== HEADER / NAVIGATION ====== -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight">
+                <span class="text-3xl">🎮</span>
+                <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
+                <a href="/" class="hover:text-terracotta transition">Home</a>
+                <a href="#" class="hover:text-terracotta transition">Guides</a>
+                <a href="#" class="hover:text-terracotta transition">Build Mode</a>
+                <a href="#" class="hover:text-terracotta transition">Characters</a>
+                <a href="#" class="hover:text-terracotta transition">Careers</a>
+                <a href="about.html" class="hover:text-terracotta transition">About</a>
+            </div>
+            <button class="md:hidden text-2xl p-1" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main class="flex-1">
+        <div class="max-w-3xl mx-auto px-4 py-12 md:py-20">
+
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <span class="text-6xl block mb-4">📬</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Contact Us</h1>
+                <p class="text-muted text-lg">We'd love to hear from you! Here's how to reach us.</p>
+            </div>
+
+            <!-- Content -->
+            <article class="bg-card rounded-2xl p-6 md:p-10 shadow-md border border-amber-100/60 space-y-8 leading-relaxed">
+
+                <!-- Email -->
+                <section class="text-center">
+                    <div class="text-5xl mb-4">✉️</div>
+                    <h2 class="text-2xl font-bold mb-2">Send Us an Email</h2>
+                    <p class="text-muted mb-4">This is the best way to get in touch. We read every message!</p>
+                    <a href="mailto:hello@paralivesguide.wiki" class="inline-flex items-center gap-2 bg-terracotta text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-[#c07455] transition shadow-lg shadow-terracotta/25">
+                        hello@paralivesguide.wiki
+                    </a>
+                    <p class="text-xs text-muted/60 mt-3">We typically respond within 24–48 hours.</p>
+                </section>
+
+                <!-- Divider -->
+                <hr class="border-amber-100/60">
+
+                <!-- What to Contact About -->
+                <section>
+                    <h2 class="text-xl font-bold mb-4">📋 What Can You Contact Us About?</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-cream/70 rounded-xl p-5">
+                            <div class="text-3xl mb-2">🐛</div>
+                            <h3 class="font-bold text-warm-brown mb-1">Report an Error</h3>
+                            <p class="text-sm text-muted">Spotted a typo, wrong info, or broken link? Let us know and we'll fix it promptly.</p>
+                        </div>
+                        <div class="bg-cream/70 rounded-xl p-5">
+                            <div class="text-3xl mb-2">💡</div>
+                            <h3 class="font-bold text-warm-brown mb-1">Suggest a Guide</h3>
+                            <p class="text-sm text-muted">Have an idea for a guide you'd like to see? We're always looking for new topics!</p>
+                        </div>
+                        <div class="bg-cream/70 rounded-xl p-5">
+                            <div class="text-3xl mb-2">📢</div>
+                            <h3 class="font-bold text-warm-brown mb-1">Advertising Inquiry</h3>
+                            <p class="text-sm text-muted">Interested in advertising on ParalivesGuide.wiki? Reach out for details.</p>
+                        </div>
+                        <div class="bg-cream/70 rounded-xl p-5">
+                            <div class="text-3xl mb-2">🔒</div>
+                            <h3 class="font-bold text-warm-brown mb-1">Privacy Concern</h3>
+                            <p class="text-sm text-muted">Questions about our privacy policy or data practices? We take these seriously.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Divider -->
+                <hr class="border-amber-100/60">
+
+                <!-- Other Ways -->
+                <section>
+                    <h2 class="text-xl font-bold mb-4">🔗 Other Ways to Connect</h2>
+                    <ul class="space-y-3 text-muted">
+                        <li class="flex items-start gap-3">
+                            <span class="text-xl">🐦</span>
+                            <span>Follow <strong>@Paralives</strong> on Twitter/X for official game updates from the developers.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-xl">💬</span>
+                            <span>Join the <strong>official Paralives Discord</strong> — the best place to chat with the community and follow development news.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-xl">🔖</span>
+                            <span><strong>Bookmark this site</strong> and check back when Paralives launches on May 25, 2026 — we'll have full guides ready!</span>
+                        </li>
+                    </ul>
+                </section>
+
+            </article>
+
+            <!-- Back Link -->
+            <div class="text-center mt-10">
+                <a href="/" class="inline-flex items-center gap-2 text-terracotta font-semibold hover:underline">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-xl font-extrabold">
+                        <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span>
+                    </span>
+                    <p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="/" class="hover:text-terracotta transition">Home</a></li>
+                        <li><a href="#" class="hover:text-terracotta transition">All Guides</a></li>
+                        <li><a href="about.html" class="hover:text-terracotta transition">About This Site</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-terracotta transition">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="hover:text-terracotta transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Disclaimer</h4>
+                    <p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p>
+                </div>
+            </div>
+            <div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70">
+                <p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

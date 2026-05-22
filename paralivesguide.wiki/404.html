@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — ParalivesGuide.wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'nunito': ['Nunito', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        'cream': '#fdf6ec',
+                        'warm-brown': '#5c4033',
+                        'terracotta': '#d4845f',
+                        'muted': '#8b7e74',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex items-center justify-center">
+    <div class="text-center px-4">
+        <div class="text-8xl mb-4">🔍</div>
+        <h1 class="text-5xl font-extrabold mb-4">404</h1>
+        <p class="text-xl text-muted mb-8">Oops! This page doesn't exist yet.<br>Maybe it will when Paralives launches? 😄</p>
+        <a href="/" class="inline-block bg-terracotta text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-[#c07455] transition shadow-lg">← Back to Home</a>
+    </div>
+</body>
+</html>

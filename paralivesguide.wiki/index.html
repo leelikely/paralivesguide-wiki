@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralives Guide Wiki — Tips, Tricks & Walkthroughs</title>
+    <meta name="description" content="The ultimate fan-made guide wiki for Paralives — character creation, building, careers, relationships, and everything in between. Launching May 2026.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'cream':      '#fdf6ec',
+                        'warm-brown': '#5c4033',
+                        'terracotta': '#d4845f',
+                        'soft-teal':  '#7dabab',
+                        'golden':     '#e8c56d',
+                        'card':       '#fffdf7',
+                        'muted':      '#8b7e74',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
+
+    <!-- ====== HEADER / NAVIGATION ====== -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight">
+                <span class="text-3xl">🎮</span>
+                <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
+                <a href="/" class="text-terracotta transition border-b-2 border-terracotta pb-1">Home</a>
+                <a href="#" class="hover:text-terracotta transition">Guides</a>
+                <a href="#" class="hover:text-terracotta transition">Build Mode</a>
+                <a href="#" class="hover:text-terracotta transition">Characters</a>
+                <a href="#" class="hover:text-terracotta transition">Careers</a>
+                <a href="about.html" class="hover:text-terracotta transition">About</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl p-1" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main class="flex-1">
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 pt-16 pb-8 md:pt-28 md:pb-12 text-center">
+            <!-- Launch badge -->
+            <span class="inline-flex items-center gap-2 bg-golden/30 text-warm-brown/80 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-golden/40">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Launching May 25, 2026
+            </span>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
+                Your Cozy Corner for<br class="hidden sm:block">
+                <span class="text-terracotta">Paralives</span> Guides
+            </h1>
+
+            <p class="text-base md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+                Character creation deep-dives, build mode masterclasses, career path breakdowns,
+                and relationship guides — everything a new Para needs, wrapped up in one warm,
+                community-driven wiki.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-[#c07455] transition shadow-lg shadow-terracotta/25">
+                    📖 Browse All Guides
+                </a>
+                <a href="about.html" class="inline-flex items-center justify-center gap-2 bg-white text-warm-brown px-8 py-3.5 rounded-full font-bold text-lg hover:bg-gray-50 transition shadow-md border border-amber-100">
+                    ℹ️ What is Paralives?
+                </a>
+            </div>
+        </section>
+
+        <!-- Latest Guides Section -->
+        <section class="max-w-6xl mx-auto px-4 pb-24">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">📝 Latest Guides</h2>
+                <a href="#" class="text-terracotta font-semibold text-sm hover:underline hidden sm:block">View all →</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <article class="group bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100/60 hover:border-terracotta/30 cursor-pointer">
+                    <div class="text-5xl mb-4">👤</div>
+                    <span class="text-xs font-semibold text-soft-teal bg-soft-teal/10 px-3 py-1 rounded-full">Beginner</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2 group-hover:text-terracotta transition">Getting Started: Your First Para</h3>
+                    <p class="text-muted text-sm leading-relaxed">Step-by-step walkthrough of the character creator — traits, appearance, backstory, and finding your Para's unique style.</p>
+                    <div class="mt-4 text-xs text-muted/60">Coming May 2026</div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="group bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100/60 hover:border-terracotta/30 cursor-pointer">
+                    <div class="text-5xl mb-4">🏠</div>
+                    <span class="text-xs font-semibold text-soft-teal bg-soft-teal/10 px-3 py-1 rounded-full">Beginner</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2 group-hover:text-terracotta transition">Build Mode: The Complete Basics</h3>
+                    <p class="text-muted text-sm leading-relaxed">Walls, roofs, windows, and floors — master every building tool so you can create your dream house from day one.</p>
+                    <div class="mt-4 text-xs text-muted/60">Coming May 2026</div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="group bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100/60 hover:border-terracotta/30 cursor-pointer">
+                    <div class="text-5xl mb-4">💼</div>
+                    <span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full">Intermediate</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2 group-hover:text-terracotta transition">Career Paths & Skill Trees</h3>
+                    <p class="text-muted text-sm leading-relaxed">Every career path ranked and explained — salary, requirements, promotions, and which skills you'll need to level up.</p>
+                    <div class="mt-4 text-xs text-muted/60">Coming May 2026</div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="group bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100/60 hover:border-terracotta/30 cursor-pointer">
+                    <div class="text-5xl mb-4">💕</div>
+                    <span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full">Intermediate</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2 group-hover:text-terracotta transition">Relationships & Social System Deep-Dive</h3>
+                    <p class="text-muted text-sm leading-relaxed">How friendships, romances, rivalries, and family bonds work — plus hidden social mechanics you might miss.</p>
+                    <div class="mt-4 text-xs text-muted/60">Coming May 2026</div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="group bg-card rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100/60 hover:border-terracotta/30 cursor-pointer">
+                    <div class="text-5xl mb-4">🎨</div>
+                    <span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full">Advanced</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2 group-hover:text-terracotta transition">Custom Content & Modding 101</h3>
+                    <p class="text-muted text-sm leading-relaxed">Everything we know about Paralives' modding tools, Steam Workshop support, and how to install custom content safely.</p>
+                    <div class="mt-4 text-xs text-muted/60">Coming May 2026</div>
+                </article>
+
+                <!-- Card 6 — CTA -->
+                <article class="bg-gradient-to-br from-terracotta/10 to-golden/10 rounded-2xl p-6 shadow-md border border-terracotta/20 flex flex-col justify-center items-center text-center">
+                    <div class="text-5xl mb-4">📬</div>
+                    <h3 class="font-bold text-lg mb-2">Stay in the Loop</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-4">Bookmark this site and come back when Paralives launches. We'll have everything ready for you!</p>
+                    <span class="text-xs text-muted/60">🔖 Bookmark for later</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <span class="text-xl font-extrabold">
+                        <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span>
+                    </span>
+                    <p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="/" class="hover:text-terracotta transition">Home</a></li>
+                        <li><a href="#" class="hover:text-terracotta transition">All Guides</a></li>
+                        <li><a href="about.html" class="hover:text-terracotta transition">About This Site</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-terracotta transition">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="hover:text-terracotta transition">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Disclaimer -->
+                <div>
+                    <h4 class="font-bold mb-3">Disclaimer</h4>
+                    <p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p>
+                </div>
+            </div>
+            <!-- Bottom bar -->
+            <div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70">
+                <p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
