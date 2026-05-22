@@ -6,14 +6,14 @@
     <url><loc>https://paralivesguide.wiki/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-01-15</lastmod></url>
     <url><loc>https://paralivesguide.wiki/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2026-01-15</lastmod></url>
 
-    <!-- Existing articles (Phase 5) -->
+    <!-- Original Phase 5 articles -->
     <url><loc>https://paralivesguide.wiki/articles/getting-started-your-first-para.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-15</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/build-mode-complete-basics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-20</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/career-paths-skill-trees.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-22</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/relationships-social-system.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-24</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/custom-content-modding-101.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-26</lastmod></url>
 
-    <!-- New articles (Phase 5 expansion, May 2026) -->
+    <!-- Expansion articles (May 2026) -->
     <url><loc>https://paralivesguide.wiki/articles/free-early-access-keys-scam-prevention.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-console-commands-cheats-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-settings-performance-graphics-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
@@ -29,4 +29,8 @@
     <url><loc>https://paralivesguide.wiki/articles/paralives-paramaker-face-creation-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-personality-traits-combos-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-genetics-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
+
+    <!-- Achievements & Secrets (new category) -->
+    <url><loc>https://paralivesguide.wiki/articles/paralives-achievements-unlock-conditions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/paralives-hidden-content-easter-eggs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
 </urlset>

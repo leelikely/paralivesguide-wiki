@@ -62,7 +62,6 @@
     </script>
 
     <style>
-        /* Mobile menu transition */
         .mobile-menu-enter {
             max-height: 0;
             opacity: 0;
@@ -82,12 +81,9 @@
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script> -->
 
     <script>
-        // =============================================
-        // COOKIE CONSENT BANNER (GDPR/CCPA compliant)
-        // =============================================
+        // Cookie Consent Banner
         (function() {
             if (localStorage.getItem('pg_cookie_consent')) return;
-
             var banner = document.createElement('div');
             banner.id = 'cookie-banner';
             banner.innerHTML = '<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fffdf7;border-top:2px solid #e8c56d;padding:14px 20px;font-family:Nunito,system-ui,sans-serif;font-size:13px;color:#5c4033;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.08)">'
@@ -96,7 +92,6 @@
                 + '<button id="cookie-decline" style="background:transparent;color:#8b7e74;border:1px solid #ddd6cc;padding:8px 20px;border-radius:20px;font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap">Decline</button>'
                 + '</div>';
             document.body.appendChild(banner);
-
             document.getElementById('cookie-accept').addEventListener('click', function() {
                 localStorage.setItem('pg_cookie_consent', 'accepted');
                 document.getElementById('cookie-banner').remove();
@@ -107,30 +102,27 @@
             });
         })();
     </script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
 </head>
 <body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
 
     <!-- ====== HEADER / NAVIGATION ====== -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
         <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo -->
             <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight shrink-0">
                 <span class="text-3xl">🎮</span>
                 <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span>
             </a>
-
-            <!-- Desktop Nav Links -->
             <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
                 <a href="/" class="text-terracotta transition border-b-2 border-terracotta pb-1">Home</a>
                 <a href="guides.html" class="hover:text-terracotta transition">Guides</a>
                 <a href="guides.html#build-mode" class="hover:text-terracotta transition">Build Mode</a>
                 <a href="guides.html#characters" class="hover:text-terracotta transition">Characters</a>
                 <a href="guides.html#careers" class="hover:text-terracotta transition">Careers</a>
+                <a href="guides.html#achievements-secrets" class="hover:text-terracotta transition">Achievements</a>
                 <a href="about.html" class="hover:text-terracotta transition">About</a>
             </div>
-
-            <!-- Mobile Menu Button -->
             <button id="menu-btn" class="md:hidden text-2xl p-2 -mr-2 rounded-lg hover:bg-amber-50 transition" aria-label="Open menu" aria-expanded="false">
                 <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -140,8 +132,6 @@
                 </svg>
             </button>
         </nav>
-
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="mobile-menu-enter md:hidden">
             <div class="px-4 py-4 space-y-1 bg-white border-t border-amber-100/40">
                 <a href="/" class="block px-4 py-3 rounded-xl font-semibold bg-terracotta/10 text-terracotta transition">🏠 Home</a>
@@ -149,6 +139,7 @@
                 <a href="guides.html#build-mode" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Build Mode</a>
                 <a href="guides.html#characters" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">👤 Characters</a>
                 <a href="guides.html#careers" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">💼 Careers</a>
+                <a href="guides.html#achievements-secrets" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏆 Achievements</a>
                 <hr class="border-amber-100/40 my-2">
                 <a href="about.html" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 About</a>
                 <a href="privacy-policy.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">🔒 Privacy Policy</a>
@@ -157,28 +148,22 @@
         </div>
     </header>
 
-    <!-- ====== MAIN CONTENT ====== -->
     <main class="flex-1">
-
         <!-- Hero Section -->
         <section class="max-w-6xl mx-auto px-4 pt-16 pb-8 md:pt-28 md:pb-12 text-center">
-            <!-- Launch badge -->
             <span class="inline-flex items-center gap-2 bg-golden/30 text-warm-brown/80 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-golden/40">
                 <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Launching May 25, 2026
             </span>
-
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
                 Your Cozy Corner for<br class="hidden sm:block">
                 <span class="text-terracotta">Paralives</span> Guides
             </h1>
-
             <p class="text-base md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
                 Character creation deep-dives, build mode masterclasses, career path breakdowns,
                 and relationship guides — everything a new Para needs, wrapped up in one warm,
                 community-driven wiki.
             </p>
-
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="guides.html" class="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-[#c07455] transition shadow-lg shadow-terracotta/25">
                     📖 Browse All Guides
@@ -242,12 +227,9 @@
                     <span class="inline-block mt-4 text-xs text-soft-teal font-semibold">Read guide →</span>
                 </a>
 
-                <!-- Card 6 — CTA -->
-                <article class="bg-gradient-to-br from-terracotta/10 to-golden/10 rounded-2xl p-6 shadow-md border border-terracotta/20 flex flex-col justify-center items-center text-center">
-                    <div class="text-5xl mb-4">📚</div>
-                    <h3 class="font-bold text-lg mb-2">20+ Guides and Counting</h3>
-                    <p class="text-muted text-sm leading-relaxed mb-4">Explore our full library of tips, tricks, and in‑depth tutorials.</p>
-                    <a href="guides.html" class="inline-block mt-4 text-xs text-terracotta font-semibold hover:underline">Browse all guides →</a>
+                <!-- Card 6 — Rotating Highlight -->
+                <article id="rotating-card" class="bg-gradient-to-br from-terracotta/10 to-golden/10 rounded-2xl p-6 shadow-md border border-terracotta/20 flex flex-col justify-center items-center text-center transition-opacity duration-500">
+                    <!-- Content will be filled by JavaScript -->
                 </article>
 
                 <!-- Ad Unit: Homepage Banner -->
@@ -263,14 +245,12 @@
     <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
         <div class="max-w-6xl mx-auto px-4 py-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <!-- Brand -->
                 <div>
                     <span class="text-xl font-extrabold">
                         <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span>
                     </span>
                     <p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p>
                 </div>
-                <!-- Quick Links -->
                 <div>
                     <h4 class="font-bold mb-3">Quick Links</h4>
                     <ul class="space-y-2 text-sm text-muted">
@@ -281,13 +261,11 @@
                         <li><a href="contact.html" class="hover:text-terracotta transition">Contact</a></li>
                     </ul>
                 </div>
-                <!-- Disclaimer -->
                 <div>
                     <h4 class="font-bold mb-3">Disclaimer</h4>
                     <p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p>
                 </div>
             </div>
-            <!-- Bottom bar -->
             <div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70">
                 <p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p>
             </div>
@@ -296,6 +274,7 @@
 
     <!-- ====== SCRIPTS ====== -->
     <script>
+        // Mobile menu
         (function() {
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -327,35 +306,80 @@
 
             menuBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
-                if (isOpen) {
-                    closeMenu();
-                } else {
-                    openMenu();
-                }
+                if (isOpen) { closeMenu(); } else { openMenu(); }
             });
 
-            // Close when clicking a menu link
             mobileMenu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    closeMenu();
-                });
+                link.addEventListener('click', function() { closeMenu(); });
             });
 
-            // Close when clicking outside
             document.addEventListener('click', function(e) {
-                if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-                    closeMenu();
-                }
+                if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) { closeMenu(); }
             });
 
-            // Close on Escape key
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && isOpen) {
-                    closeMenu();
-                }
+                if (e.key === 'Escape' && isOpen) { closeMenu(); }
             });
         })();
-    </script>
 
+        // Rotating 6th card
+        (function() {
+            const card = document.getElementById('rotating-card');
+            if (!card) return;
+
+            const slides = [
+                {
+                    icon: '🏅',
+                    title: 'Achievements & Unlock Conditions',
+                    desc: 'All known Paralives achievements with tips.',
+                    link: 'articles/paralives-achievements-unlock-conditions.html',
+                    tag: 'Achievements'
+                },
+                {
+                    icon: '🥚',
+                    title: 'Hidden Content & Easter Eggs',
+                    desc: 'Secrets 90% of players miss!',
+                    link: 'articles/paralives-hidden-content-easter-eggs.html',
+                    tag: 'Secrets'
+                },
+                {
+                    icon: '📚',
+                    title: '20+ Guides and Counting',
+                    desc: 'Explore our full library of tips, tricks, and in‑depth tutorials.',
+                    link: 'guides.html',
+                    tag: 'Browse All'
+                }
+            ];
+
+            let current = 0;
+
+            function renderSlide(index) {
+                const s = slides[index];
+                card.innerHTML = `
+                    <div class="text-5xl mb-4">${s.icon}</div>
+                    <span class="text-xs font-semibold bg-terracotta/10 text-terracotta px-3 py-1 rounded-full mb-3">${s.tag}</span>
+                    <h3 class="font-bold text-lg mb-2">${s.title}</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-4">${s.desc}</p>
+                    <a href="${s.link}" class="inline-block mt-4 text-xs text-terracotta font-semibold hover:underline">Read guide →</a>
+                `;
+            }
+
+            function nextSlide() {
+                current = (current + 1) % slides.length;
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    renderSlide(current);
+                    card.style.opacity = '1';
+                }, 300);
+            }
+
+            // Initial render
+            renderSlide(0);
+            card.style.opacity = '1';
+
+            // Rotate every 5 seconds
+            setInterval(nextSlide, 5000);
+        })();
+    </script>
 </body>
 </html>
