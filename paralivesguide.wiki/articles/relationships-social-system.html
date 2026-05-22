@@ -40,6 +40,66 @@
         .prose .tip-box{background:#eef7f5;border-left:4px solid #7dabab;padding:1rem 1.25rem;margin:1.5rem 0;border-radius:0 0.75rem 0.75rem 0}.prose .tip-box strong{color:#5c8a8a}
         .toc-link.active{color:#d4845f;font-weight:700}
     </style>
+
+    <!-- ====== Ads & Cookie Consent ====== -->
+    <script>
+        // =============================================
+        // AD LOADER — Moneytag + AdSense (future)
+        // =============================================
+        // INSTRUCTIONS:
+        // 1. Moneytag: replace YOUR_MONEYTAG_ID below with your actual site ID
+        // 2. AdSense: uncomment the Google AdSense block when approved
+        // =============================================
+
+        (function() {
+            // --- Moneytag (activate when registered) ---
+            // Uncomment when you have your Moneytag ID:
+            //
+            // var mt = document.createElement('script');
+            // mt.src = 'https://cdn.moneytag.com/publisher/YOUR_MONEYTAG_ID.js';
+            // mt.async = true;
+            // mt.setAttribute('data-cfasync', 'false');
+            // document.head.appendChild(mt);
+
+            // --- Google AdSense (activate when approved) ---
+            // Uncomment when AdSense approves your site:
+            //
+            // var ga = document.createElement('script');
+            // ga.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000';
+            // ga.async = true;
+            // ga.crossOrigin = 'anonymous';
+            // document.head.appendChild(ga);
+
+            console.log('[ParalivesGuide] Ad loader ready. Activate Moneytag or AdSense when registered.');
+        })();
+    </script>
+
+    <script>
+        // =============================================
+        // COOKIE CONSENT BANNER (GDPR/CCPA compliant)
+        // =============================================
+        (function() {
+            if (localStorage.getItem('pg_cookie_consent')) return;
+
+            var banner = document.createElement('div');
+            banner.id = 'cookie-banner';
+            banner.innerHTML = '<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fffdf7;border-top:2px solid #e8c56d;padding:14px 20px;font-family:Nunito,system-ui,sans-serif;font-size:13px;color:#5c4033;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.08)">'
+                + '<span>🍪 This site uses cookies for ads and analytics. By continuing, you agree. <a href="/privacy-policy.html" style="color:#d4845f;font-weight:700;text-decoration:underline">Learn more</a></span>'
+                + '<button id="cookie-accept" style="background:#d4845f;color:#fff;border:none;padding:8px 20px;border-radius:20px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap">Accept</button>'
+                + '<button id="cookie-decline" style="background:transparent;color:#8b7e74;border:1px solid #ddd6cc;padding:8px 20px;border-radius:20px;font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap">Decline</button>'
+                + '</div>';
+            document.body.appendChild(banner);
+
+            document.getElementById('cookie-accept').addEventListener('click', function() {
+                localStorage.setItem('pg_cookie_consent', 'accepted');
+                document.getElementById('cookie-banner').remove();
+            });
+            document.getElementById('cookie-decline').addEventListener('click', function() {
+                localStorage.setItem('pg_cookie_consent', 'declined');
+                document.getElementById('cookie-banner').remove();
+            });
+        })();
+    </script>
 </head>
 <body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
 
@@ -137,6 +197,12 @@
                         <h3>Siblings</h3>
                         <p>Sibling relationships are dynamic. Close-in-age siblings can be best friends or bitter rivals depending on how you play them. The game has a hidden "sibling rivalry" score that increases when one sibling gets more attention or achieves more than the other. It's subtle but realistic — and resolving sibling rivalries can be one of the most satisfying social arcs in the game.</p>
 
+
+                    <!-- Ad Unit: In-Content -->
+                    <div class="my-8 p-4 bg-amber-50/50 rounded-xl border border-amber-100/40 text-center">
+                        <p class="text-xs text-muted/50 mb-2">— Advertisement —</p>
+                        <div class="ad-slot-incontent bg-amber-100/30 rounded-lg flex items-center justify-center text-xs text-muted/40" style="min-height:250px">Ad Slot — Activate in Moneytag/AdSense</div>
+                    </div>                        
                         <h2 id="rivalries">Rivalries & Conflict</h2>
                         <p>Not all relationships are positive, and that's by design. Conflict adds texture. Rivalries can form through repeated negative interactions, competing for the same romantic interest, or professional competition. Rival Paras will autonomously try to one-up each other and may sabotage each other's social events.</p>
                         <p>You can lean into rivalries for dramatic storytelling, or you can work to resolve them through apologies, peace offerings, and mediated conversations. Resolving a deep rivalry is genuinely difficult — it takes time, consistency, and often a third-party mediator — but the payoff (turning an enemy into a friend) is one of the most rewarding feelings the game offers.</p>
@@ -164,6 +230,12 @@
                         <p>Got a social strategy or a story about your Para's relationships? <a href="../contact.html">Share it with us</a> — we love hearing from the community!</p>
 
                     </div>
+
+                    <!-- Ad Unit: Bottom Content -->
+                    <div class="my-8 p-4 bg-amber-50/50 rounded-xl border border-amber-100/40 text-center">
+                        <p class="text-xs text-muted/50 mb-2">— Advertisement —</p>
+                        <div class="ad-slot-bottom bg-amber-100/30 rounded-lg flex items-center justify-center text-xs text-muted/40" style="min-height:120px">Ad Slot — Activate in Moneytag/AdSense</div>
+                    </div>                   
                     <div class="mt-10 pt-6 border-t border-amber-100/60 text-xs text-muted/60 space-y-1"><p><strong>Category:</strong> <a href="../guides.html#relationships" class="text-terracotta hover:underline">Relationships & Social</a></p><p><strong>Tags:</strong> relationships, friendship, romance, family, social events, conflict</p></div>
                 </article>
             </div>

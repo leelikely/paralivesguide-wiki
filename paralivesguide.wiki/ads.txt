@@ -1,0 +1,8 @@
+# Ad network authorization for paralivesguide.wiki
+# ================================================
+
+# Google AdSense (activate when approved)
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Moneytag (activate when registered)
+# moneytag.com, YOUR_SITE_ID, DIRECT
