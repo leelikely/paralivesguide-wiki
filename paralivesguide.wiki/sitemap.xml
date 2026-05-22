@@ -1,45 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Home -->
-    <url>
-        <loc>https://paralivesguide.wiki/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <lastmod>2026-01-15</lastmod>
-    </url>
-    <!-- Guides Hub -->
-    <url>
-        <loc>https://paralivesguide.wiki/guides.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <lastmod>2026-01-15</lastmod>
-    </url>
-    <!-- About -->
-    <url>
-        <loc>https://paralivesguide.wiki/about.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-        <lastmod>2026-01-15</lastmod>
-    </url>
-    <!-- Privacy Policy -->
-    <url>
-        <loc>https://paralivesguide.wiki/privacy-policy.html</loc>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-        <lastmod>2026-01-15</lastmod>
-    </url>
-    <!-- Contact -->
-    <url>
-        <loc>https://paralivesguide.wiki/contact.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-        <lastmod>2026-01-15</lastmod>
-    </url>
-    <!-- Articles -->
-    <url>
-        <loc>https://paralivesguide.wiki/articles/getting-started-your-first-para.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <lastmod>2026-01-15</lastmod>
-    </url>
+    <url><loc>https://paralivesguide.wiki/</loc><changefreq>weekly</changefreq><priority>1.0</priority><lastmod>2026-01-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/guides.html</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-01-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2026-01-15</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-01-15</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2026-01-15</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/getting-started-your-first-para.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-15</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/build-mode-complete-basics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-20</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/career-paths-skill-trees.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-22</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/relationships-social-system.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-24</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/custom-content-modding-101.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-26</lastmod></url>
 </urlset>

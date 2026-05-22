@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationships & Social System Deep-Dive — ParalivesGuide.wiki</title>
+    <meta name="description" content="How friendships, romances, rivalries, and family bonds work in Paralives — plus hidden social mechanics you might miss.">
+
+    <meta property="og:title" content="Relationships & Social System Deep-Dive — ParalivesGuide.wiki">
+    <meta property="og:description" content="How friendships, romances, rivalries, and family bonds work in Paralives — plus hidden social mechanics you might miss.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://paralivesguide.wiki/articles/relationships-social-system.html">
+    <meta property="og:site_name" content="ParalivesGuide.wiki">
+    <meta property="og:locale" content="en_US">
+    <link rel="canonical" href="https://paralivesguide.wiki/articles/relationships-social-system.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Relationships & Social System Deep-Dive — ParalivesGuide.wiki">
+    <meta name="twitter:description" content="How friendships, romances, rivalries, and family bonds work in Paralives — plus hidden social mechanics you might miss.">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Relationships & Social System Deep-Dive","description":"How friendships, romances, rivalries, and family bonds work in Paralives — plus hidden social mechanics you might miss.","datePublished":"2026-01-24","dateModified":"2026-01-24","author":{"@type":"Person","name":"ParalivesGuide Team"},"publisher":{"@type":"Organization","name":"ParalivesGuide.wiki"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://paralivesguide.wiki/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://paralivesguide.wiki/guides.html"},{"@type":"ListItem","position":3,"name":"Relationships & Social System","item":"https://paralivesguide.wiki/articles/relationships-social-system.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{'nunito':['Nunito','system-ui','sans-serif']},colors:{'cream':'#fdf6ec','warm-brown':'#5c4033','terracotta':'#d4845f','soft-teal':'#7dabab','golden':'#e8c56d','card':'#fffdf7','muted':'#8b7e74'}}}}</script>
+    <style>
+        .mobile-menu-enter{max-height:0;opacity:0;overflow:hidden;transition:max-height 0.35s ease,opacity 0.25s ease}.mobile-menu-open{max-height:500px;opacity:1}
+        .prose h2{font-size:1.5rem;font-weight:800;margin-top:2.25rem;margin-bottom:0.75rem;color:#5c4033;padding-top:0.5rem;border-top:2px solid #fdf6ec}
+        .prose h3{font-size:1.2rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.5rem;color:#5c4033}
+        .prose p{margin-bottom:1.15rem;line-height:1.85}.prose ul,.prose ol{margin-bottom:1.15rem;padding-left:1.5rem}
+        .prose li{margin-bottom:0.4rem;line-height:1.75}.prose ul li{list-style-type:disc}.prose ol li{list-style-type:decimal}
+        .prose strong{color:#5c4033;font-weight:700}.prose a{color:#d4845f;text-decoration:underline;font-weight:600}.prose a:hover{color:#b06545}
+        .prose blockquote{border-left:4px solid #e8c56d;padding:0.75rem 1.25rem;margin:1.5rem 0;background:#fef9ef;border-radius:0 0.75rem 0.75rem 0;font-style:italic;color:#6b5a4e}
+        .prose .tip-box{background:#eef7f5;border-left:4px solid #7dabab;padding:1rem 1.25rem;margin:1.5rem 0;border-radius:0 0.75rem 0.75rem 0}.prose .tip-box strong{color:#5c8a8a}
+        .toc-link.active{color:#d4845f;font-weight:700}
+    </style>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight shrink-0"><span class="text-3xl">🎮</span><span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span></a>
+            <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
+                <a href="/" class="hover:text-terracotta transition">Home</a><a href="../guides.html" class="text-terracotta transition border-b-2 border-terracotta pb-1">Guides</a><a href="../guides.html#build-mode" class="hover:text-terracotta transition">Build Mode</a><a href="../guides.html#characters" class="hover:text-terracotta transition">Characters</a><a href="../guides.html#careers" class="hover:text-terracotta transition">Careers</a><a href="../about.html" class="hover:text-terracotta transition">About</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl p-2 -mr-2 rounded-lg hover:bg-amber-50 transition" aria-label="Open menu" aria-expanded="false">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-enter md:hidden">
+            <div class="px-4 py-4 space-y-1 bg-white border-t border-amber-100/40">
+                <a href="/" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Home</a><a href="../guides.html" class="block px-4 py-3 rounded-xl font-semibold bg-terracotta/10 text-terracotta transition">📖 All Guides</a><a href="../guides.html#build-mode" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Build Mode</a><a href="../guides.html#characters" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">👤 Characters</a><a href="../guides.html#careers" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">💼 Careers</a>
+                <hr class="border-amber-100/40 my-2"><a href="../about.html" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 About</a><a href="../privacy-policy.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">🔒 Privacy Policy</a><a href="../contact.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">📬 Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <div class="max-w-4xl mx-auto px-4 pt-4 pb-0"><nav class="text-xs text-muted/70 flex flex-wrap items-center gap-1.5 py-3" aria-label="Breadcrumb"><a href="/" class="hover:text-terracotta transition">Home</a><span>/</span><a href="../guides.html" class="hover:text-terracotta transition">Guides</a><span>/</span><span class="text-warm-brown font-semibold">Relationships & Social System</span></nav></div>
+        <div class="max-w-6xl mx-auto px-4 pb-16">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <aside class="hidden lg:block w-56 shrink-0">
+                    <div class="sticky top-24"><h4 class="text-xs font-bold uppercase tracking-widest text-muted/60 mb-3">On This Page</h4>
+                        <nav class="space-y-1.5 text-sm" id="toc">
+                            <a href="#overview" class="toc-link block py-1 text-muted hover:text-terracotta transition">Overview</a>
+                            <a href="#how-relationships-work" class="toc-link block py-1 text-muted hover:text-terracotta transition">How Relationships Work</a>
+                            <a href="#friendship" class="toc-link block py-1 text-muted hover:text-terracotta transition">Friendship</a>
+                            <a href="#romance" class="toc-link block py-1 text-muted hover:text-terracotta transition">Romance & Dating</a>
+                            <a href="#family" class="toc-link block py-1 text-muted hover:text-terracotta transition">Family Bonds</a>
+                            <a href="#rivalries" class="toc-link block py-1 text-muted hover:text-terracotta transition">Rivalries & Conflict</a>
+                            <a href="#social-events" class="toc-link block py-1 text-muted hover:text-terracotta transition">Social Events</a>
+                            <a href="#tips" class="toc-link block py-1 text-muted hover:text-terracotta transition">Pro Tips</a>
+                        </nav>
+                        <div class="mt-8 p-4 bg-amber-50/50 rounded-xl border border-amber-100/40 text-center"><p class="text-xs text-muted/50">— Ad —</p><div class="h-40 bg-amber-100/30 rounded-lg mt-2 flex items-center justify-center text-xs text-muted/40">Ad Space</div></div>
+                    </div>
+                </aside>
+
+                <article class="flex-1 min-w-0 max-w-3xl">
+                    <header class="mb-8"><div class="flex flex-wrap items-center gap-3 mb-4"><span class="text-xs font-semibold text-golden bg-golden/20 px-3 py-1 rounded-full">Intermediate</span><span class="text-xs text-muted/60">💕 Social</span><span class="text-xs text-muted/60">⏱️ 11 min read</span></div>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">Relationships & Social System Deep-Dive</h1>
+                        <p class="text-lg text-muted leading-relaxed">Friendships, romance, rivalries, family bonds — every social mechanic in Paralives explained, including the hidden ones the tutorial doesn't mention.</p>
+                        <div class="flex items-center gap-3 mt-5 text-xs text-muted/60"><span>📅 Published: January 24, 2026</span><span>·</span><span>🔄 Updated: January 24, 2026</span></div>
+                    </header>
+
+                    <div class="prose text-muted">
+
+                        <h2 id="overview">Overview</h2>
+                        <p>The social system in Paralives is quietly one of the most sophisticated parts of the game. On the surface it looks simple — you chat with someone, the little green bar goes up, you're friends now. But underneath there's a web of relationship types, hidden compatibility scores, memory systems, and social dynamics that can spiral in genuinely unexpected directions.</p>
+                        <p>I spent my first 20 hours mostly ignoring social interactions, focusing on career and building. Big mistake. The social system isn't just a side feature — it's woven into everything. Your relationships affect your career (networking matters!), your mood (loneliness is real), and even how other Paras autonomously behave around you.</p>
+
+                        <div class="tip-box"><strong>💡 Tip:</strong> The game tracks relationships even when you're not actively maintaining them. Neglected friendships decay slowly over time. If you ignore someone for too long, they'll notice — and they might not be thrilled when you suddenly show up again.</div>
+
+                        <h2 id="how-relationships-work">How Relationships Work</h2>
+                        <p>Every relationship between two Paras exists on <strong>two independent scales:</strong></p>
+                        <ul>
+                            <li><strong>Affinity (green bar):</strong> How much they like each other. Ranges from -100 (utter hatred) to +100 (deep bond).</li>
+                            <li><strong>Familiarity (blue bar):</strong> How well they know each other. Ranges from 0 (complete stranger) to 100 (knows everything about them).</li>
+                        </ul>
+                        <p>Here's the key insight: <strong>you can have high affinity with low familiarity</strong> (a charming acquaintance everyone likes but nobody really knows) or <strong>high familiarity with low affinity</strong> (a coworker you've known for years but can't stand). The game treats these differently — a high-familiarity enemy will have more vicious interactions than a stranger who randomly dislikes you.</p>
+                        <p>Relationships are also <strong>two-way.</strong> Just because your Para likes someone doesn't mean that someone likes them back. Unrequited friendships and one-sided crushes are absolutely a thing, and they create some of the best unscripted drama in the game.</p>
+
+                        <h2 id="friendship">Friendship</h2>
+                        <p>Friendships are the foundation of the social system. They're easier to build than romantic relationships but still require maintenance. Here's what the game doesn't tell you:</p>
+                        <h3>Shared Experiences Matter</h3>
+                        <p>Paras who go through things together bond faster. If you invite someone to a party, go on a group outing, or survive an awkward situation together (like a power outage during a dinner party), the relationship gets a permanent "shared memory" bonus that increases future social gains. The more memories you have with someone, the stronger the underlying bond.</p>
+                        <h3>Trait Compatibility</h3>
+                        <p>This is huge and easy to miss. Paras have <strong>natural compatibility</strong> based on their traits. A Cheerful Para and a Gloomy Para aren't automatically enemies, but they'll have fewer positive social options and might occasionally annoy each other without you doing anything. Meanwhile, two Creative Paras will have special "geek out together" interactions that build friendship rapidly.</p>
+                        <p>You can check compatibility by opening the relationship panel and looking for the small colored icon next to the other Para's name. Green = good match, yellow = neutral, red = you're going to have to work for this one.</p>
+                        <h3>Friend Groups</h3>
+                        <p>When multiple Paras who are all friends with each other gather, they form an informal "friend group." Group members get a small mood boost when together, unlock group-specific interactions, and will autonomously defend each other in social conflicts. It's worth cultivating a tight circle of 3-5 friends rather than being shallow acquaintances with everyone.</p>
+
+                        <h2 id="romance">Romance & Dating</h2>
+                        <p>Romance builds on top of friendship. You can't romance a stranger — you need at least a moderate friendship level before romantic interactions even appear. This makes romantic relationships feel more earned than in some other games where you can basically propose to someone you just met.</p>
+                        <h3>Attraction System</h3>
+                        <p>Behind the scenes, each Para has an "attraction profile" — a set of preferences for traits, appearance, and social status. You can't see these directly (they're intentionally hidden), but you can infer them from reactions. If you try a flirty interaction and the other Para gets uncomfortable, they might not be into your Para's type. If they reciprocate enthusiastically, you're on the right track.</p>
+                        <h3>Relationship Stages</h3>
+                        <ul>
+                            <li><strong>Crush:</strong> One-sided or mutual. Unlocks flirty interactions. Can be awkward if unrequited.</li>
+                            <li><strong>Dating:</strong> Mutual romantic interest. Exclusive by default but can be set to open in the relationship settings.</li>
+                            <li><strong>Partners:</strong> Serious committed relationship. Unlocks "move in together" and shared finances.</li>
+                            <li><strong>Engaged:</strong> Proposal accepted. Planning a wedding becomes available.</li>
+                            <li><strong>Married:</strong> Full commitment. Shared last name (optional), joint household, legal benefits.</li>
+                        </ul>
+                        <p>One detail I love: <strong>breakups have consequences.</strong> A bad breakup creates a temporary "heartbroken" moodlet that affects everything from work performance to skill gains. And the ex will remember what happened — don't expect to be friends right away (or possibly ever).</p>
+
+                        <h2 id="family">Family Bonds</h2>
+                        <p>Family relationships are the strongest and most resilient bond type. Parent-child, sibling, and extended family connections have a higher baseline affinity that's harder to break. You can still have bad family relationships (family drama is a thing!), but it takes more sustained negativity to get there.</p>
+                        <h3>Parenting</h3>
+                        <p>Parent Paras have special interactions with their children — teaching skills, giving advice, and a unique "Parental Pride" moodlet when their kid achieves something significant. Neglectful parenting has consequences too: children who don't get enough attention develop negative traits or behavioral issues as they age up.</p>
+                        <h3>Siblings</h3>
+                        <p>Sibling relationships are dynamic. Close-in-age siblings can be best friends or bitter rivals depending on how you play them. The game has a hidden "sibling rivalry" score that increases when one sibling gets more attention or achieves more than the other. It's subtle but realistic — and resolving sibling rivalries can be one of the most satisfying social arcs in the game.</p>
+
+                        <h2 id="rivalries">Rivalries & Conflict</h2>
+                        <p>Not all relationships are positive, and that's by design. Conflict adds texture. Rivalries can form through repeated negative interactions, competing for the same romantic interest, or professional competition. Rival Paras will autonomously try to one-up each other and may sabotage each other's social events.</p>
+                        <p>You can lean into rivalries for dramatic storytelling, or you can work to resolve them through apologies, peace offerings, and mediated conversations. Resolving a deep rivalry is genuinely difficult — it takes time, consistency, and often a third-party mediator — but the payoff (turning an enemy into a friend) is one of the most rewarding feelings the game offers.</p>
+
+                        <h2 id="social-events">Social Events</h2>
+                        <p>Parties, dinners, weddings, and casual hangouts are where relationships really develop. A few event types worth knowing about:</p>
+                        <ul>
+                            <li><strong>House Parties:</strong> High-energy, lots of social mixing. Great for making new friends and strengthening group bonds. Downside: your house will be a mess afterwards.</li>
+                            <li><strong>Dinner Parties:</strong> Smaller, more intimate. Best for deepening existing relationships. The quality of the food matters — a burnt meal can tank the whole evening.</li>
+                            <li><strong>Weddings:</strong> Major life event. Proper planning (venue, guests, ceremony) leads to lasting positive memories for everyone involved. A chaotic wedding makes for great stories but strained relationships.</li>
+                            <li><strong>Casual Hangouts:</strong> Low-pressure, no planning needed. Just invite someone over to watch a movie or play a game. These small moments are where organic relationship growth happens.</li>
+                        </ul>
+
+                        <h2 id="tips">Pro Tips</h2>
+                        <ol>
+                            <li><strong>Gifts are powerful but don't overuse them.</strong> Giving a thoughtful gift (matching the recipient's interests) gives a big relationship boost. But spamming gifts makes you look desperate and the effect diminishes.</li>
+                            <li><strong>Listen to the conversation tone.</strong> The game gives audio and visual cues about how a social interaction is going. If the conversation turns awkward (yellow tint), switch topics or back off for a bit.</li>
+                            <li><strong>Shared hobbies = easy friendship.</strong> Two Paras who both love cooking will bond effortlessly in the kitchen. Invite acquaintances to do activities your Para enjoys — it's the most natural way to build relationships.</li>
+                            <li><strong>Don't ignore the phone.</strong> Paras will call and text. Responding keeps relationships warm; ignoring calls causes slow decay. You don't have to say yes to every invitation, but at least acknowledge the message.</li>
+                            <li><strong>Conflict resolution is a skill.</strong> The "Apologize" and "Smooth Things Over" interactions have a hidden success rate based on your Charisma skill and the severity of the conflict. Don't expect a quick fix for a deep betrayal.</li>
+                        </ol>
+
+                        <h2 id="whats-next">The Social Life You Want</h2>
+                        <p>Ultimately, the social system is a storytelling engine. Whether you want a Para with a hundred friends, a tight-knit family, a dramatic love life, or a solo existence with a cat — the tools are there. The best approach is to let relationships develop naturally. Don't force it. Some of the best moments in Paralives come from unplanned social interactions that spiral into something memorable.</p>
+                        <p>Got a social strategy or a story about your Para's relationships? <a href="../contact.html">Share it with us</a> — we love hearing from the community!</p>
+
+                    </div>
+                    <div class="mt-10 pt-6 border-t border-amber-100/60 text-xs text-muted/60 space-y-1"><p><strong>Category:</strong> <a href="../guides.html#relationships" class="text-terracotta hover:underline">Relationships & Social</a></p><p><strong>Tags:</strong> relationships, friendship, romance, family, social events, conflict</p></div>
+                </article>
+            </div>
+        </div>
+
+        <section class="max-w-4xl mx-auto px-4 pb-16">
+            <h2 class="text-xl font-bold mb-5 border-t border-amber-100/60 pt-8">📖 Related Guides</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="getting-started-your-first-para.html" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3"><span class="text-3xl">👤</span><div><h3 class="font-bold text-sm group-hover:text-terracotta transition">Getting Started: Your First Para</h3><p class="text-xs text-muted mt-1">Beginner · Character Creation</p></div></a>
+                <a href="career-paths-skill-trees.html" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3"><span class="text-3xl">💼</span><div><h3 class="font-bold text-sm group-hover:text-terracotta transition">Career Paths & Skill Trees</h3><p class="text-xs text-muted mt-1">Intermediate · Careers</p></div></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-10"><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"><div><span class="text-xl font-extrabold"><span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span></span><p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p></div><div><h4 class="font-bold mb-3">Quick Links</h4><ul class="space-y-2 text-sm text-muted"><li><a href="/" class="hover:text-terracotta transition">Home</a></li><li><a href="../guides.html" class="hover:text-terracotta transition">All Guides</a></li><li><a href="../about.html" class="hover:text-terracotta transition">About This Site</a></li><li><a href="../privacy-policy.html" class="hover:text-terracotta transition">Privacy Policy</a></li><li><a href="../contact.html" class="hover:text-terracotta transition">Contact</a></li></ul></div><div><h4 class="font-bold mb-3">Disclaimer</h4><p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p></div></div><div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70"><p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p></div></div>
+    </footer>
+
+    <script>
+        (function(){const m=document.getElementById('menu-btn'),u=document.getElementById('mobile-menu'),o=document.getElementById('menu-icon-open'),c=document.getElementById('menu-icon-close');let i=false;function e(){i=true;u.classList.remove('mobile-menu-enter');u.classList.add('mobile-menu-open');o.classList.add('hidden');c.classList.remove('hidden');m.setAttribute('aria-expanded','true');m.setAttribute('aria-label','Close menu');document.body.style.overflow='hidden'}function s(){i=false;u.classList.remove('mobile-menu-open');u.classList.add('mobile-menu-enter');o.classList.remove('hidden');c.classList.add('hidden');m.setAttribute('aria-expanded','false');m.setAttribute('aria-label','Open menu');document.body.style.overflow=''}m.addEventListener('click',function(t){t.stopPropagation();i?s():e()});u.querySelectorAll('a').forEach(function(t){t.addEventListener('click',function(){s()})});document.addEventListener('click',function(t){if(i&&!u.contains(t.target)&&!m.contains(t.target)){s()}});document.addEventListener('keydown',function(t){if(t.key==='Escape'&&i){s()}});
+        (function(){var l=document.querySelectorAll('.toc-link'),n=[];l.forEach(function(t){var d=t.getAttribute('href').replace('#',''),e=document.getElementById(d);if(e)n.push({link:t,top:e.offsetTop-120})});function r(){var y=window.scrollY;n.forEach(function(t,i){var x=n[i+1];if(y>=t.top&&(!x||y<x.top)){l.forEach(function(k){k.classList.remove('active')});t.link.classList.add('active')}})}window.addEventListener('scroll',r,{passive:true})})();
+    })();
+    </script>
+</body>
+</html>

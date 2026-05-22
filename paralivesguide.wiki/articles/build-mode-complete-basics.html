@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Mode: The Complete Basics — ParalivesGuide.wiki</title>
+    <meta name="description" content="Master every building tool in Paralives — walls, roofs, windows, floors, furniture, and the innovative features that make Paralives build mode special.">
+
+    <meta property="og:title" content="Build Mode: The Complete Basics — ParalivesGuide.wiki">
+    <meta property="og:description" content="Master every building tool in Paralives — walls, roofs, windows, floors, furniture, and the innovative features that make Paralives build mode special.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://paralivesguide.wiki/articles/build-mode-complete-basics.html">
+    <meta property="og:site_name" content="ParalivesGuide.wiki">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="canonical" href="https://paralivesguide.wiki/articles/build-mode-complete-basics.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Build Mode: The Complete Basics — ParalivesGuide.wiki">
+    <meta name="twitter:description" content="Master every building tool in Paralives — walls, roofs, windows, floors, furniture, and the innovative features that make Paralives build mode special.">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Build Mode: The Complete Basics",
+        "description": "Master every building tool in Paralives — walls, roofs, windows, floors, furniture, and the innovative features that make Paralives build mode special.",
+        "datePublished": "2026-01-20",
+        "dateModified": "2026-01-20",
+        "author": { "@type": "Person", "name": "ParalivesGuide Team" },
+        "publisher": { "@type": "Organization", "name": "ParalivesGuide.wiki" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://paralivesguide.wiki/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://paralivesguide.wiki/guides.html" },
+            { "@type": "ListItem", "position": 3, "name": "Build Mode: The Complete Basics", "item": "https://paralivesguide.wiki/articles/build-mode-complete-basics.html" }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                fontFamily: { 'nunito': ['Nunito', 'system-ui', 'sans-serif'] },
+                colors: {
+                    'cream':'#fdf6ec','warm-brown':'#5c4033','terracotta':'#d4845f',
+                    'soft-teal':'#7dabab','golden':'#e8c56d','card':'#fffdf7','muted':'#8b7e74'
+                }
+            }}
+        }
+    </script>
+    <style>
+        .mobile-menu-enter { max-height:0;opacity:0;overflow:hidden;transition:max-height 0.35s ease,opacity 0.25s ease }
+        .mobile-menu-open { max-height:500px;opacity:1 }
+        .prose h2 { font-size:1.5rem;font-weight:800;margin-top:2.25rem;margin-bottom:0.75rem;color:#5c4033;padding-top:0.5rem;border-top:2px solid #fdf6ec }
+        .prose h3 { font-size:1.2rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.5rem;color:#5c4033 }
+        .prose p { margin-bottom:1.15rem;line-height:1.85 }
+        .prose ul,.prose ol { margin-bottom:1.15rem;padding-left:1.5rem }
+        .prose li { margin-bottom:0.4rem;line-height:1.75 }
+        .prose ul li { list-style-type:disc }
+        .prose ol li { list-style-type:decimal }
+        .prose strong { color:#5c4033;font-weight:700 }
+        .prose a { color:#d4845f;text-decoration:underline;font-weight:600 }
+        .prose a:hover { color:#b06545 }
+        .prose blockquote { border-left:4px solid #e8c56d;padding:0.75rem 1.25rem;margin:1.5rem 0;background:#fef9ef;border-radius:0 0.75rem 0.75rem 0;font-style:italic;color:#6b5a4e }
+        .prose .tip-box { background:#eef7f5;border-left:4px solid #7dabab;padding:1rem 1.25rem;margin:1.5rem 0;border-radius:0 0.75rem 0.75rem 0 }
+        .prose .tip-box strong { color:#5c8a8a }
+        .toc-link.active { color:#d4845f;font-weight:700 }
+    </style>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight shrink-0">
+                <span class="text-3xl">🎮</span>
+                <span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
+                <a href="/" class="hover:text-terracotta transition">Home</a>
+                <a href="../guides.html" class="text-terracotta transition border-b-2 border-terracotta pb-1">Guides</a>
+                <a href="../guides.html#build-mode" class="hover:text-terracotta transition">Build Mode</a>
+                <a href="../guides.html#characters" class="hover:text-terracotta transition">Characters</a>
+                <a href="../guides.html#careers" class="hover:text-terracotta transition">Careers</a>
+                <a href="../about.html" class="hover:text-terracotta transition">About</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl p-2 -mr-2 rounded-lg hover:bg-amber-50 transition" aria-label="Open menu" aria-expanded="false">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-enter md:hidden">
+            <div class="px-4 py-4 space-y-1 bg-white border-t border-amber-100/40">
+                <a href="/" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Home</a>
+                <a href="../guides.html" class="block px-4 py-3 rounded-xl font-semibold bg-terracotta/10 text-terracotta transition">📖 All Guides</a>
+                <a href="../guides.html#build-mode" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Build Mode</a>
+                <a href="../guides.html#characters" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">👤 Characters</a>
+                <a href="../guides.html#careers" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">💼 Careers</a>
+                <hr class="border-amber-100/40 my-2">
+                <a href="../about.html" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 About</a>
+                <a href="../privacy-policy.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">🔒 Privacy Policy</a>
+                <a href="../contact.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">📬 Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <div class="max-w-4xl mx-auto px-4 pt-4 pb-0">
+            <nav class="text-xs text-muted/70 flex flex-wrap items-center gap-1.5 py-3" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-terracotta transition">Home</a><span>/</span>
+                <a href="../guides.html" class="hover:text-terracotta transition">Guides</a><span>/</span>
+                <span class="text-warm-brown font-semibold">Build Mode: The Complete Basics</span>
+            </nav>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 pb-16">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <aside class="hidden lg:block w-56 shrink-0">
+                    <div class="sticky top-24">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-muted/60 mb-3">On This Page</h4>
+                        <nav class="space-y-1.5 text-sm" id="toc">
+                            <a href="#overview" class="toc-link block py-1 text-muted hover:text-terracotta transition">Overview</a>
+                            <a href="#getting-started" class="toc-link block py-1 text-muted hover:text-terracotta transition">Getting Into Build Mode</a>
+                            <a href="#walls-rooms" class="toc-link block py-1 text-muted hover:text-terracotta transition">Walls &amp; Rooms</a>
+                            <a href="#floors-roofs" class="toc-link block py-1 text-muted hover:text-terracotta transition">Floors &amp; Roofs</a>
+                            <a href="#doors-windows" class="toc-link block py-1 text-muted hover:text-terracotta transition">Doors &amp; Windows</a>
+                            <a href="#furniture" class="toc-link block py-1 text-muted hover:text-terracotta transition">Furniture &amp; Decor</a>
+                            <a href="#advanced" class="toc-link block py-1 text-muted hover:text-terracotta transition">Advanced Features</a>
+                            <a href="#common-mistakes" class="toc-link block py-1 text-muted hover:text-terracotta transition">Common Mistakes</a>
+                        </nav>
+                        <div class="mt-8 p-4 bg-amber-50/50 rounded-xl border border-amber-100/40 text-center">
+                            <p class="text-xs text-muted/50">— Ad —</p>
+                            <div class="h-40 bg-amber-100/30 rounded-lg mt-2 flex items-center justify-center text-xs text-muted/40">Ad Space</div>
+                        </div>
+                    </div>
+                </aside>
+
+                <article class="flex-1 min-w-0 max-w-3xl">
+                    <header class="mb-8">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="text-xs font-semibold text-soft-teal bg-soft-teal/10 px-3 py-1 rounded-full">Beginner</span>
+                            <span class="text-xs text-muted/60">🏠 Build Mode</span>
+                            <span class="text-xs text-muted/60">⏱️ 10 min read</span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">Build Mode: The Complete Basics</h1>
+                        <p class="text-lg text-muted leading-relaxed">Walls, roofs, windows, floors — every building tool in Paralives explained step by step, from your first empty lot to a fully decorated home.</p>
+                        <div class="flex items-center gap-3 mt-5 text-xs text-muted/60">
+                            <span>📅 Published: January 20, 2026</span><span>·</span><span>🔄 Updated: January 20, 2026</span>
+                        </div>
+                    </header>
+
+                    <div class="prose text-muted">
+
+                        <h2 id="overview">Overview</h2>
+                        <p>Let me tell you something I wish someone had told me before I opened Paralives Build Mode for the first time: <strong>this is not The Sims.</strong> Yes, it looks familiar on the surface — walls, furniture, roofing — but the moment you start clicking around, you realize the tools work completely differently. And honestly? That's a good thing.</p>
+                        <p>Paralives Build Mode was designed from scratch, and it shows. The developers clearly looked at what frustrated players about other building systems and said, "Yeah, let's not do that." The result is a toolset that feels intuitive once you understand it, but can also throw you for a loop if you go in expecting a clone of something else.</p>
+                        <p>This guide covers everything you need to build your first house — from laying down your first wall to placing the finishing decorative touches. I'll walk you through each tool, explain what it does, and point out the features that aren't immediately obvious (there are a few hidden gems).</p>
+
+                        <div class="tip-box"><strong>💡 Tip:</strong> Before you start building, make sure you have enough in-game currency. Building costs money, and nothing kills the creative flow faster than running out of funds halfway through your dream kitchen. Start small if you're on a budget — you can always expand later.</div>
+
+                        <h2 id="getting-started">Getting Into Build Mode</h2>
+                        <p>You enter Build Mode by clicking the hammer icon in the bottom-right corner of the screen — or by pressing <strong>B</strong> on your keyboard (which you'll be doing approximately eight hundred times per play session once you get addicted to renovating).</p>
+                        <p>The interface is split into a few main areas:</p>
+                        <ul>
+                            <li><strong>Tool Palette</strong> — Left side of the screen. This is where you pick what you're doing: building walls, placing furniture, landscaping, etc.</li>
+                            <li><strong>Catalog</strong> — Bottom panel. Shows available items for the selected tool, sorted by category and style.</li>
+                            <li><strong>Info Bar</strong> — Top of the screen. Shows your current lot value, room dimensions as you draw, and the ever-important Undo button.</li>
+                            <li><strong>Grid Overlay</strong> — The dotted lines on your lot. Toggle with <strong>G</strong> if they're distracting you.</li>
+                        </ul>
+                        <p>One thing I love: the catalog has a <strong>style filter</strong> that lets you show only Modern, Rustic, Vintage, or Eclectic pieces. If you're someone who gets overwhelmed by too many options (raises hand), this is a lifesaver.</p>
+
+                        <h2 id="walls-rooms">Walls &amp; Rooms</h2>
+                        <p>Building starts with walls. Click the Wall Tool (or press <strong>W</strong>), then click and drag on your lot to draw. Paralives uses a <strong>click-and-drag system</strong> rather than the traditional "click start, click end" method — you literally draw walls the way you'd draw a line in a paint program. It's faster once you get used to it.</p>
+                        <h3>Wall Heights</h3>
+                        <p>You can set walls to three heights: <strong>Low, Medium, and Tall.</strong> Low walls are great for cozy cottages or minimalist modern builds. Tall walls make rooms feel grand and airy — perfect for entryways, great rooms, or anywhere you want to show off tall windows. You can mix wall heights <em>on the same floor</em>, which is genuinely unique and lets you create split-level effects without complicated tricks.</p>
+                        <h3>Curved Walls</h3>
+                        <p>Here's the feature that made my jaw drop the first time I used it. While drawing a wall, hold <strong>Shift</strong> and drag sideways — the wall curves. You can control the curve radius in real time. Want a circular tower? Done. A gently curved living room wall with floor-to-ceiling windows? Absolutely. This single feature opens up architectural possibilities that used to require mods in other games.</p>
+                        <h3>Rooms</h3>
+                        <p>When you draw a closed shape with walls, the game automatically recognizes it as a room. You'll see a faint highlight and the room's dimensions pop up in the info bar. Click inside the room to select it — from there you can change the floor type, wall covering, ceiling, and (if it's on the ground floor) add a foundation.</p>
+
+                        <h2 id="floors-roofs">Floors &amp; Roofs</h2>
+                        <p>Once your walls are up, you need floors and a roof. Paralives handles these separately from walls, which took me a bit to wrap my head around.</p>
+                        <h3>Floors</h3>
+                        <p>The Floor Tool lets you paint surfaces — wood, tile, stone, carpet, you name it. You apply it per-room or per-level. One neat trick: you can <strong>paint partial floors</strong> by holding Ctrl and selecting specific tiles. This is great for creating area rugs, kitchen tile patterns, or transition strips between rooms.</p>
+                        <h3>Roofs</h3>
+                        <p>Roofs in Paralives are <strong>auto-generated but fully adjustable.</strong> Click "Add Roof" and the game will place a basic gable roof on your structure. From there you can change the roof type (gable, hip, flat, gambrel, and a few more), adjust the pitch by dragging, and add dormers. The roof tool also supports <strong>overhangs</strong> — drag the eaves out for a craftsman look, or tuck them in for a modern flat-roof aesthetic.</p>
+                        <p>If you're building a multi-story house, you can place <strong>different roof types on different sections.</strong> Add a gable over the main house and a flat roof over the garage extension — the game handles the intersection cleanly without leaving weird gaps (which was the bane of my existence in other builders).</p>
+
+                        <h2 id="doors-windows">Doors &amp; Windows</h2>
+                        <p>Placement is straightforward: pick from the catalog, click on a wall, done. But there are a few things worth knowing:</p>
+                        <ul>
+                            <li><strong>Doors and windows snap to the grid by default.</strong> Hold <strong>Alt</strong> for free placement — great for off-center windows or unconventional layouts.</li>
+                            <li><strong>Front doors are special.</strong> The game designates the first exterior door you place as the "front door." This is where visitors knock and where mail gets delivered. You can change it later by right-clicking any exterior door and selecting "Set as Front Door."</li>
+                            <li><strong>Window height is adjustable.</strong> After placing a window, you can drag it up or down the wall. Want high clerestory windows for privacy? Go for it.</li>
+                            <li><strong>Curtains and blinds are separate items</strong> that auto-attach to windows when placed nearby. They'll resize to match the window width, which is a small touch that saves so much fiddling.</li>
+                        </ul>
+
+                        <h2 id="furniture">Furniture &amp; Decor</h2>
+                        <p>This is where things get fun. The furniture catalog is extensive — and I mean <em>extensive</em>. You've got everything from beds and sofas to potted plants and wall art. A few highlights:</p>
+                        <h3>Resizable Objects</h3>
+                        <p>Select any furniture item and press <strong>[</strong> or <strong>]</strong> to shrink or enlarge it. Want an oversized statement painting? A tiny side table that fits in a narrow hallway? The resize tool handles it. Just keep an eye on functionality — resize a dining table too small and Paras won't be able to eat at it, even if it looks cute.</p>
+                        <h3>Color Swatches &amp; Materials</h3>
+                        <p>Almost every item has multiple color options, and some have <strong>material variants</strong> (wood vs. metal vs. fabric). You can also use the <strong>Color Picker</strong> tool to sample a color from one item and apply it to another — perfect for matching wood tones across different furniture pieces.</p>
+                        <h3>The Clutter Rule</h3>
+                        <p>Here's a personal tip: <strong>clutter makes a house feel lived-in.</strong> Books on coffee tables, dishes by the sink, a jacket thrown over a chair — these tiny details are what turn a "nice build" into a "wow, I want to live there" build. Paralives has a dedicated Clutter category in the catalog. Use it liberally.</p>
+
+                        <h2 id="advanced">Advanced Features Worth Knowing</h2>
+                        <h3>Foundations &amp; Decks</h3>
+                        <p>Foundations raise your entire house off the ground. You set the height in the Room Properties panel. Decks work similarly but are placed as separate "rooms" without walls. You can connect a deck to the house and add stairs down to the yard. The stair tool auto-adjusts based on the height difference, which is one less thing to worry about.</p>
+                        <h3>Basements</h3>
+                        <p>Yes, basements! Select the Basement Tool and draw underground rooms the same way you draw above-ground ones. You'll need stairs to access them, obviously. Lighting is dimmer underground by default, so plan for plenty of light fixtures.</p>
+                        <h3>Multi-Story Building</h3>
+                        <p>Once your ground floor is done, click "Add Level" to build a second story. The game shows a ghosted outline of the floor below so you can align walls. Stairs connect the levels — and there are multiple stair styles, from straight runs to L-shaped and spiral staircases.</p>
+                        <h3>The Undo Button Is Your Best Friend</h3>
+                        <p>Ctrl+Z. Memorize it. Love it. Paralives has a generous undo history, so don't be afraid to experiment. Try that weird roof shape, place that bold wallpaper — if it doesn't work, just undo.</p>
+
+                        <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+                        <ol>
+                            <li><strong>Forgetting to check lot boundaries.</strong> Your lot has edges. Build too close to them and you won't have space for a yard, driveway, or expansions. Zoom out and check the lot outline before you commit.</li>
+                            <li><strong>Ignoring lighting.</strong> A beautifully furnished room looks terrible in the dark. Place light fixtures in every room — ceiling lights, floor lamps, wall sconces. Mix light sources for depth.</li>
+                            <li><strong>Building too big too fast.</strong> I know the empty lot is tempting. But a massive house takes forever to furnish and costs a fortune. Start with 2-3 rooms and expand as your household grows.</li>
+                            <li><strong>Not using the style filter.</strong> The furniture catalog is huge. Filtering by style cuts the options down to something manageable and helps keep your build visually cohesive.</li>
+                            <li><strong>Skipping landscaping.</strong> A house with no plants, no path, no outdoor details looks plopped-down and unnatural. Even a few bushes and a walkway make a huge difference.</li>
+                        </ol>
+
+                        <h2 id="whats-next">Ready to Build?</h2>
+                        <p>That covers the fundamentals! Once you're comfortable with the basics, check out our guides on furniture arrangement, outdoor spaces, and advanced roofing techniques (all coming soon). For now, grab an empty lot and start experimenting — the best way to learn Build Mode is to <em>build stuff.</em></p>
+                        <p>Got a build you're proud of? We'd genuinely love to see it. Reach out through our <a href="../contact.html">Contact page</a> and share your creation!</p>
+
+                    </div>
+
+                    <div class="mt-10 pt-6 border-t border-amber-100/60 text-xs text-muted/60 space-y-1">
+                        <p><strong>Category:</strong> <a href="../guides.html#build-mode" class="text-terracotta hover:underline">Build Mode</a></p>
+                        <p><strong>Tags:</strong> build mode, construction, walls, roofs, furniture, beginner</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <section class="max-w-4xl mx-auto px-4 pb-16">
+            <h2 class="text-xl font-bold mb-5 border-t border-amber-100/60 pt-8">📖 Related Guides</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="getting-started-your-first-para.html" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3">
+                    <span class="text-3xl">👤</span><div><h3 class="font-bold text-sm group-hover:text-terracotta transition">Getting Started: Your First Para</h3><p class="text-xs text-muted mt-1">Beginner · Character Creation</p></div>
+                </a>
+                <a href="../guides.html#careers" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3">
+                    <span class="text-3xl">💼</span><div><h3 class="font-bold text-sm group-hover:text-terracotta transition">Career Paths & Skill Trees</h3><p class="text-xs text-muted mt-1">Intermediate · Careers</p></div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div><span class="text-xl font-extrabold"><span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span></span><p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p></div>
+                <div><h4 class="font-bold mb-3">Quick Links</h4><ul class="space-y-2 text-sm text-muted"><li><a href="/" class="hover:text-terracotta transition">Home</a></li><li><a href="../guides.html" class="hover:text-terracotta transition">All Guides</a></li><li><a href="../about.html" class="hover:text-terracotta transition">About This Site</a></li><li><a href="../privacy-policy.html" class="hover:text-terracotta transition">Privacy Policy</a></li><li><a href="../contact.html" class="hover:text-terracotta transition">Contact</a></li></ul></div>
+                <div><h4 class="font-bold mb-3">Disclaimer</h4><p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p></div>
+            </div>
+            <div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70"><p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const menuBtn=document.getElementById('menu-btn'),mobileMenu=document.getElementById('mobile-menu'),iconOpen=document.getElementById('menu-icon-open'),iconClose=document.getElementById('menu-icon-close');let isOpen=false;
+            function openMenu(){isOpen=true;mobileMenu.classList.remove('mobile-menu-enter');mobileMenu.classList.add('mobile-menu-open');iconOpen.classList.add('hidden');iconClose.classList.remove('hidden');menuBtn.setAttribute('aria-expanded','true');menuBtn.setAttribute('aria-label','Close menu');document.body.style.overflow='hidden';}
+            function closeMenu(){isOpen=false;mobileMenu.classList.remove('mobile-menu-open');mobileMenu.classList.add('mobile-menu-enter');iconOpen.classList.remove('hidden');iconClose.classList.add('hidden');menuBtn.setAttribute('aria-expanded','false');menuBtn.setAttribute('aria-label','Open menu');document.body.style.overflow='';}
+            menuBtn.addEventListener('click',function(e){e.stopPropagation();if(isOpen){closeMenu()}else{openMenu()}});
+            mobileMenu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){closeMenu()})});
+            document.addEventListener('click',function(e){if(isOpen&&!mobileMenu.contains(e.target)&&!menuBtn.contains(e.target)){closeMenu()}});
+            document.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen){closeMenu()}});
+            (function(){var tocLinks=document.querySelectorAll('.toc-link'),sections=[];tocLinks.forEach(function(link){var id=link.getAttribute('href').replace('#','');var el=document.getElementById(id);if(el)sections.push({link:link,top:el.offsetTop-120})});function updateToc(){var scrollY=window.scrollY;sections.forEach(function(item,i){var next=sections[i+1];if(scrollY>=item.top&&(!next||scrollY<next.top)){tocLinks.forEach(function(l){l.classList.remove('active')});item.link.classList.add('active')}})}window.addEventListener('scroll',updateToc,{passive:true})})();
+        })();
+    </script>
+</body>
+</html>

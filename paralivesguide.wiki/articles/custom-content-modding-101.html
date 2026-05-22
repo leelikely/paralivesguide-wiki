@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Content & Modding 101 — ParalivesGuide.wiki</title>
+    <meta name="description" content="Everything we know about Paralives modding tools, Steam Workshop support, and how to install custom content safely — plus recommended tools for beginners.">
+
+    <meta property="og:title" content="Custom Content & Modding 101 — ParalivesGuide.wiki">
+    <meta property="og:description" content="Everything we know about Paralives modding tools, Steam Workshop support, and how to install custom content safely — plus recommended tools for beginners.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://paralivesguide.wiki/articles/custom-content-modding-101.html">
+    <meta property="og:site_name" content="ParalivesGuide.wiki">
+    <meta property="og:locale" content="en_US">
+    <link rel="canonical" href="https://paralivesguide.wiki/articles/custom-content-modding-101.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom Content & Modding 101 — ParalivesGuide.wiki">
+    <meta name="twitter:description" content="Everything we know about Paralives modding tools, Steam Workshop support, and how to install custom content safely.">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Custom Content & Modding 101","description":"Everything we know about Paralives modding tools, Steam Workshop support, and how to install custom content safely.","datePublished":"2026-01-26","dateModified":"2026-01-26","author":{"@type":"Person","name":"ParalivesGuide Team"},"publisher":{"@type":"Organization","name":"ParalivesGuide.wiki"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://paralivesguide.wiki/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://paralivesguide.wiki/guides.html"},{"@type":"ListItem","position":3,"name":"Custom Content & Modding 101","item":"https://paralivesguide.wiki/articles/custom-content-modding-101.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{'nunito':['Nunito','system-ui','sans-serif']},colors:{'cream':'#fdf6ec','warm-brown':'#5c4033','terracotta':'#d4845f','soft-teal':'#7dabab','golden':'#e8c56d','card':'#fffdf7','muted':'#8b7e74'}}}}</script>
+    <style>
+        .mobile-menu-enter{max-height:0;opacity:0;overflow:hidden;transition:max-height 0.35s ease,opacity 0.25s ease}.mobile-menu-open{max-height:500px;opacity:1}
+        .prose h2{font-size:1.5rem;font-weight:800;margin-top:2.25rem;margin-bottom:0.75rem;color:#5c4033;padding-top:0.5rem;border-top:2px solid #fdf6ec}
+        .prose h3{font-size:1.2rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.5rem;color:#5c4033}
+        .prose p{margin-bottom:1.15rem;line-height:1.85}.prose ul,.prose ol{margin-bottom:1.15rem;padding-left:1.5rem}
+        .prose li{margin-bottom:0.4rem;line-height:1.75}.prose ul li{list-style-type:disc}.prose ol li{list-style-type:decimal}
+        .prose strong{color:#5c4033;font-weight:700}.prose a{color:#d4845f;text-decoration:underline;font-weight:600}.prose a:hover{color:#b06545}
+        .prose blockquote{border-left:4px solid #e8c56d;padding:0.75rem 1.25rem;margin:1.5rem 0;background:#fef9ef;border-radius:0 0.75rem 0.75rem 0;font-style:italic;color:#6b5a4e}
+        .prose .tip-box{background:#eef7f5;border-left:4px solid #7dabab;padding:1rem 1.25rem;margin:1.5rem 0;border-radius:0 0.75rem 0.75rem 0}.prose .tip-box strong{color:#5c8a8a}
+        .toc-link.active{color:#d4845f;font-weight:700}
+    </style>
+</head>
+<body class="bg-cream font-nunito text-warm-brown min-h-screen flex flex-col antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-amber-100/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight shrink-0"><span class="text-3xl">🎮</span><span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-sm font-normal">.wiki</span></a>
+            <div class="hidden md:flex items-center space-x-7 font-semibold text-sm">
+                <a href="/" class="hover:text-terracotta transition">Home</a><a href="../guides.html" class="text-terracotta transition border-b-2 border-terracotta pb-1">Guides</a><a href="../guides.html#build-mode" class="hover:text-terracotta transition">Build Mode</a><a href="../guides.html#characters" class="hover:text-terracotta transition">Characters</a><a href="../guides.html#careers" class="hover:text-terracotta transition">Careers</a><a href="../about.html" class="hover:text-terracotta transition">About</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl p-2 -mr-2 rounded-lg hover:bg-amber-50 transition" aria-label="Open menu" aria-expanded="false">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-enter md:hidden">
+            <div class="px-4 py-4 space-y-1 bg-white border-t border-amber-100/40">
+                <a href="/" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Home</a><a href="../guides.html" class="block px-4 py-3 rounded-xl font-semibold bg-terracotta/10 text-terracotta transition">📖 All Guides</a><a href="../guides.html#build-mode" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">🏠 Build Mode</a><a href="../guides.html#characters" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">👤 Characters</a><a href="../guides.html#careers" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">💼 Careers</a>
+                <hr class="border-amber-100/40 my-2"><a href="../about.html" class="block px-4 py-3 rounded-xl font-semibold hover:bg-amber-50 transition">📖 About</a><a href="../privacy-policy.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">🔒 Privacy Policy</a><a href="../contact.html" class="block px-4 py-3 rounded-xl text-sm text-muted hover:bg-amber-50 transition">📬 Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <div class="max-w-4xl mx-auto px-4 pt-4 pb-0"><nav class="text-xs text-muted/70 flex flex-wrap items-center gap-1.5 py-3" aria-label="Breadcrumb"><a href="/" class="hover:text-terracotta transition">Home</a><span>/</span><a href="../guides.html" class="hover:text-terracotta transition">Guides</a><span>/</span><span class="text-warm-brown font-semibold">Custom Content & Modding 101</span></nav></div>
+        <div class="max-w-6xl mx-auto px-4 pb-16">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <aside class="hidden lg:block w-56 shrink-0">
+                    <div class="sticky top-24"><h4 class="text-xs font-bold uppercase tracking-widest text-muted/60 mb-3">On This Page</h4>
+                        <nav class="space-y-1.5 text-sm" id="toc">
+                            <a href="#overview" class="toc-link block py-1 text-muted hover:text-terracotta transition">Overview</a>
+                            <a href="#what-is-cc" class="toc-link block py-1 text-muted hover:text-terracotta transition">What Is CC & Modding?</a>
+                            <a href="#steam-workshop" class="toc-link block py-1 text-muted hover:text-terracotta transition">Steam Workshop Support</a>
+                            <a href="#installing" class="toc-link block py-1 text-muted hover:text-terracotta transition">Installing CC Safely</a>
+                            <a href="#tools" class="toc-link block py-1 text-muted hover:text-terracotta transition">Recommended Tools</a>
+                            <a href="#creating" class="toc-link block py-1 text-muted hover:text-terracotta transition">Creating Your Own CC</a>
+                            <a href="#safety" class="toc-link block py-1 text-muted hover:text-terracotta transition">Safety & Best Practices</a>
+                        </nav>
+                        <div class="mt-8 p-4 bg-amber-50/50 rounded-xl border border-amber-100/40 text-center"><p class="text-xs text-muted/50">— Ad —</p><div class="h-40 bg-amber-100/30 rounded-lg mt-2 flex items-center justify-center text-xs text-muted/40">Ad Space</div></div>
+                    </div>
+                </aside>
+
+                <article class="flex-1 min-w-0 max-w-3xl">
+                    <header class="mb-8"><div class="flex flex-wrap items-center gap-3 mb-4"><span class="text-xs font-semibold bg-terracotta/10 text-terracotta px-3 py-1 rounded-full">Advanced</span><span class="text-xs text-muted/60">🎨 Modding</span><span class="text-xs text-muted/60">⏱️ 9 min read</span></div>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">Custom Content & Modding 101</h1>
+                        <p class="text-lg text-muted leading-relaxed">How modding works in Paralives, Steam Workshop support, installing custom content safely, and the tools you need to start creating your own CC.</p>
+                        <div class="flex items-center gap-3 mt-5 text-xs text-muted/60"><span>📅 Published: January 26, 2026</span><span>·</span><span>🔄 Updated: January 26, 2026</span></div>
+                    </header>
+
+                    <div class="prose text-muted">
+
+                        <h2 id="overview">Overview</h2>
+                        <p>Let's be honest: one of the biggest reasons life simulation games have staying power is modding. The base game is the foundation, but the community builds the mansion on top. Paralives Studio knows this — they've built modding support into the game from day one, which is genuinely exciting for anyone who's ever wrestled with modding a game that wasn't designed for it.</p>
+                        <p>This guide covers everything we know so far about how modding works in Paralives, how to install custom content without breaking your game, and what tools you'll need if you want to start creating your own stuff. Even if you've never installed a mod before, you'll be fine — I'll walk through it step by step.</p>
+
+                        <div class="tip-box"><strong>💡 Tip:</strong> Always back up your save files before installing new mods. It takes 30 seconds and saves hours of heartbreak if something goes wrong. Your saves live in <code>Documents/Paralives/Saves</code> — just copy the whole folder somewhere safe.</div>
+
+                        <h2 id="what-is-cc">What Is CC & Modding?</h2>
+                        <p>Quick definitions for anyone brand new to this:</p>
+                        <ul>
+                            <li><strong>Custom Content (CC):</strong> Player-created items — clothes, hair, furniture, wallpapers, patterns. CC adds new stuff to the game that the developers didn't include.</li>
+                            <li><strong>Mods (Modifications):</strong> Code changes that alter how the game behaves. Mods can add new features, fix bugs, change gameplay balance, or completely overhaul systems.</li>
+                            <li><strong>Script Mods:</strong> A more powerful type of mod that runs custom scripts. These can do almost anything — from adding new UI elements to creating entirely new game mechanics.</li>
+                        </ul>
+                        <p>Paralives supports all three types, with different levels of complexity and different installation methods for each.</p>
+
+                        <h2 id="steam-workshop">Steam Workshop Support</h2>
+                        <p>Good news: Paralives has <strong>native Steam Workshop integration.</strong> This means you can browse, subscribe to, and auto-install mods and CC directly through Steam — no manual file management required for Workshop content. Click "Subscribe" on a mod page, and Steam handles the download and installation.</p>
+                        <p>The Workshop supports:</p>
+                        <ul>
+                            <li><strong>One-click installs</strong> — Subscribe and it's in your game</li>
+                            <li><strong>Auto-updates</strong> — Mod authors push updates, Steam auto-downloads them</li>
+                            <li><strong>Collections</strong> — Curated mod lists you can subscribe to in one click (great for theme packs)</li>
+                            <li><strong>Ratings & comments</strong> — Community feedback helps you avoid broken or problematic mods</li>
+                        </ul>
+                        <p>Not everything will be on the Workshop, though. Some creators prefer to host on platforms like Nexus Mods, ModTheSims, or their own websites. For those, you'll need to install manually — which brings us to the next section.</p>
+
+                        <h2 id="installing">Installing CC & Mods Manually</h2>
+                        <p>For content that isn't on the Steam Workshop, here's the manual installation process:</p>
+                        <h3>Step 1: Download</h3>
+                        <p>Download the mod or CC file. You'll usually get a <code>.pcc</code> file (Paralives Custom Content), a <code>.package</code> file, or a <code>.zip</code>/<code>.rar</code> archive. If it's an archive, extract it first using 7-Zip or WinRAR.</p>
+                        <h3>Step 2: Find Your Mods Folder</h3>
+                        <p>Navigate to <code>Documents/Paralives/Mods</code>. If the Mods folder doesn't exist yet, you can create it. The game looks here on startup.</p>
+                        <h3>Step 3: Place the Files</h3>
+                        <p>Drop <code>.pcc</code> and <code>.package</code> files directly into the Mods folder. You can create subfolders to organize — the game scans recursively. A good structure looks like:</p>
+                        <ul>
+                            <li><code>Mods/Clothing/</code> — hair, outfits, accessories</li>
+                            <li><code>Mods/Furniture/</code> — chairs, tables, decor</li>
+                            <li><code>Mods/BuildMode/</code> — walls, floors, roofs</li>
+                            <li><code>Mods/Gameplay/</code> — script mods, overhauls</li>
+                        </ul>
+                        <h3>Step 4: Enable in Settings</h3>
+                        <p>Launch the game, go to Options → Other → and make sure "Enable Custom Content & Mods" is checked. Restart the game after enabling. The first time you launch with mods enabled, you'll see a pop-up listing all detected mods — this is your chance to confirm everything loaded correctly.</p>
+
+                        <h2 id="tools">Recommended Tools for Beginners</h2>
+                        <p>If you want to go beyond installing and start creating, here are the tools the community is already using:</p>
+                        <ul>
+                            <li><strong>Paralives Studio (official):</strong> The in-game creation tools. Paralives ships with built-in tools for creating patterns, recoloring objects, and designing simple items. Start here — no external software needed.</li>
+                            <li><strong>Blender:</strong> Free 3D modeling software. If you want to create entirely new 3D objects (furniture, hair, accessories), you'll need this. The learning curve is real, but there are tons of YouTube tutorials specifically for game modding.</li>
+                            <li><strong>GIMP / Krita:</strong> Free image editors for creating textures and patterns. GIMP is more technical; Krita is more artist-friendly. Both work.</li>
+                            <li><strong>Visual Studio Code:</strong> Free code editor. Useful for script mods and for examining mod files to understand how they work.</li>
+                            <li><strong>Sims 4 Studio (for reference):</strong> Not directly usable for Paralives, but if you've modded The Sims before, the concepts transfer. Understanding how CC works in other life sims gives you a head start.</li>
+                        </ul>
+
+                        <h2 id="creating">Creating Your Own CC: The Basics</h2>
+                        <p>Creating your first piece of custom content is incredibly satisfying. Here's a rough roadmap for a simple recolor (the easiest entry point):</p>
+                        <ol>
+                            <li><strong>Pick an object to recolor.</strong> Start with something simple — a t-shirt, a basic chair, a wall paint.</li>
+                            <li><strong>Export the texture.</strong> Use the in-game CC tools to export the object's base texture as a PNG file.</li>
+                            <li><strong>Edit in GIMP or Krita.</strong> Change colors, add patterns, get creative. Save as PNG.</li>
+                            <li><strong>Import back into the game.</strong> The CC tool lets you import your edited texture and preview it in real time.</li>
+                            <li><strong>Save as a .pcc file.</strong> Give it a name and description. This creates a standalone CC file you can share.</li>
+                            <li><strong>Test in-game.</strong> Make sure it looks right under different lighting conditions.</li>
+                        </ol>
+                        <p>For more complex projects — new 3D meshes, script mods — the process is more involved and you'll want to check out dedicated creation guides on the community forums.</p>
+
+                        <h2 id="safety">Safety & Best Practices</h2>
+                        <p>Modding is generally safe, but a few precautions go a long way:</p>
+                        <ol>
+                            <li><strong>Download from trusted sources.</strong> Steam Workshop is the safest (Valve scans for malware). For external sites, stick to well-known platforms like Nexus Mods and creator Patreons with good reputations.</li>
+                            <li><strong>Read the comments.</strong> Before installing a mod, scan recent comments for reports of bugs, conflicts, or abandoned projects.</li>
+                            <li><strong>Don't install too many at once.</strong> Add 2-3 mods, test the game, then add more. If something breaks, you'll know exactly which mod caused it.</li>
+                            <li><strong>Watch for conflicts.</strong> Two mods that modify the same game system will conflict. Mod authors usually list known conflicts on their download pages.</li>
+                            <li><strong>Keep mods updated.</strong> When Paralives gets a major update, mods may break. Check for updates from mod authors before reporting bugs to the developers.</li>
+                            <li><strong>Respect creators.</strong> If you share screenshots using someone's CC, credit them. If you modify someone else's CC and want to share it, ask permission first.</li>
+                        </ol>
+
+                        <div class="tip-box"><strong>💡 Tip:</strong> The official Paralives Discord has dedicated modding-help channels where experienced creators answer questions. If you're stuck on a creation project, that community is incredibly helpful.</div>
+
+                        <h2 id="whats-next">The Modding Rabbit Hole</h2>
+                        <p>Fair warning: modding is addictive. You start with "I'll just install this one hair recolor" and before you know it you're learning 3D modeling at 2 AM and have 14 tabs of texture tutorials open. It's wonderful.</p>
+                        <p>Whether you just want to download a few CC pieces to personalize your game, or you're aiming to become the next big mod creator in the community — the tools are there, and the community is welcoming. Start small, back up your saves, and have fun with it.</p>
+                        <p>Found a great mod or created something you're proud of? <a href="../contact.html">Let us know</a> — we're always looking for recommendations to feature!</p>
+
+                    </div>
+                    <div class="mt-10 pt-6 border-t border-amber-100/60 text-xs text-muted/60 space-y-1"><p><strong>Category:</strong> <a href="../guides.html#modding" class="text-terracotta hover:underline">Modding & Custom Content</a></p><p><strong>Tags:</strong> modding, custom content, CC, Steam Workshop, Blender, creation tools</p></div>
+                </article>
+            </div>
+        </div>
+
+        <section class="max-w-4xl mx-auto px-4 pb-16">
+            <h2 class="text-xl font-bold mb-5 border-t border-amber-100/60 pt-8">📖 Related Guides</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="build-mode-complete-basics.html" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3"><span class="text-3xl">🏠</span><div><h3 class="font-bold text-sm group-hover:text-terracotta transition">Build Mode: The Complete Basics</h3><p class="text-xs text-muted mt-1">Beginner · Build Mode</p></div></a>
+                <a href="getting-started-your-first-para.html" class="group bg-card rounded-xl p-4 shadow-sm border border-amber-100/60 hover:border-terracotta/30 transition flex items-start gap-3"><span class="text-3xl">👤</span><div><h3 class="font-bold text-sm group-hover:text-terracotta transition">Getting Started: Your First Para</h3><p class="text-xs text-muted mt-1">Beginner · Character Creation</p></div></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white/50 border-t border-amber-100/60 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-10"><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"><div><span class="text-xl font-extrabold"><span class="text-terracotta">Paralives</span><span class="text-warm-brown">Guide</span><span class="text-muted text-xs">.wiki</span></span><p class="text-muted text-sm mt-2 leading-relaxed">A fan-made guide wiki by players, for players. Not affiliated with Paralives Studio.</p></div><div><h4 class="font-bold mb-3">Quick Links</h4><ul class="space-y-2 text-sm text-muted"><li><a href="/" class="hover:text-terracotta transition">Home</a></li><li><a href="../guides.html" class="hover:text-terracotta transition">All Guides</a></li><li><a href="../about.html" class="hover:text-terracotta transition">About This Site</a></li><li><a href="../privacy-policy.html" class="hover:text-terracotta transition">Privacy Policy</a></li><li><a href="../contact.html" class="hover:text-terracotta transition">Contact</a></li></ul></div><div><h4 class="font-bold mb-3">Disclaimer</h4><p class="text-muted text-sm leading-relaxed">Paralives is developed by Paralives Studio. This wiki is an independent fan project. All game-related trademarks belong to their respective owners.</p></div></div><div class="border-t border-amber-100/60 pt-6 text-center text-xs text-muted/70"><p>© 2026 ParalivesGuide.wiki — Built with ❤️ for the Paralives community.</p></div></div>
+    </footer>
+
+    <script>
+        (function(){const m=document.getElementById('menu-btn'),u=document.getElementById('mobile-menu'),o=document.getElementById('menu-icon-open'),c=document.getElementById('menu-icon-close');let i=false;function e(){i=true;u.classList.remove('mobile-menu-enter');u.classList.add('mobile-menu-open');o.classList.add('hidden');c.classList.remove('hidden');m.setAttribute('aria-expanded','true');m.setAttribute('aria-label','Close menu');document.body.style.overflow='hidden'}function s(){i=false;u.classList.remove('mobile-menu-open');u.classList.add('mobile-menu-enter');o.classList.remove('hidden');c.classList.add('hidden');m.setAttribute('aria-expanded','false');m.setAttribute('aria-label','Open menu');document.body.style.overflow=''}m.addEventListener('click',function(t){t.stopPropagation();i?s():e()});u.querySelectorAll('a').forEach(function(t){t.addEventListener('click',function(){s()})});document.addEventListener('click',function(t){if(i&&!u.contains(t.target)&&!m.contains(t.target)){s()}});document.addEventListener('keydown',function(t){if(t.key==='Escape'&&i){s()}});
+        (function(){var l=document.querySelectorAll('.toc-link'),n=[];l.forEach(function(t){var d=t.getAttribute('href').replace('#',''),e=document.getElementById(d);if(e)n.push({link:t,top:e.offsetTop-120})});function r(){var y=window.scrollY;n.forEach(function(t,i){var x=n[i+1];if(y>=t.top&&(!x||y<x.top)){l.forEach(function(k){k.classList.remove('active')});t.link.classList.add('active')}})}window.addEventListener('scroll',r,{passive:true})})();
+    })();
+    </script>
+</body>
+</html>
