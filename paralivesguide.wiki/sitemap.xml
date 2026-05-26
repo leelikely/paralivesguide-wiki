@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://paralivesguide.wiki/</loc><changefreq>weekly</changefreq><priority>1.0</priority><lastmod>2026-05-24</lastmod></url>
-    <url><loc>https://paralivesguide.wiki/guides.html</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-05-24</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/</loc><changefreq>weekly</changefreq><priority>1.0</priority><lastmod>2026-05-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/guides.html</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-05-26</lastmod></url>
     <url><loc>https://paralivesguide.wiki/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2026-01-15</lastmod></url>
     <url><loc>https://paralivesguide.wiki/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-01-15</lastmod></url>
     <url><loc>https://paralivesguide.wiki/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2026-01-15</lastmod></url>
 
-    <!-- Original Phase 5 articles -->
+    <!-- Original Phase 5 articles (Jan 2026) -->
     <url><loc>https://paralivesguide.wiki/articles/getting-started-your-first-para.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-15</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/build-mode-complete-basics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-20</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/career-paths-skill-trees.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-01-22</lastmod></url>
@@ -34,7 +34,7 @@
     <url><loc>https://paralivesguide.wiki/articles/paralives-achievements-unlock-conditions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-hidden-content-easter-eggs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-22</lastmod></url>
 
-    <!-- New articles May 23 -->
+    <!-- May 23 articles -->
     <url><loc>https://paralivesguide.wiki/articles/paralives-build-mode-masterclass-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-23</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/best-paralives-house-blueprints.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-23</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-build-style-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-23</lastmod></url>
@@ -42,8 +42,16 @@
     <url><loc>https://paralivesguide.wiki/articles/paralives-mod-category-guide-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-23</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-mod-installation-guide-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-23</lastmod></url>
 
-    <!-- New articles May 24 -->
+    <!-- May 24 articles -->
     <url><loc>https://paralivesguide.wiki/articles/paralives-early-access-complete-guide-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-24</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-strongest-sims-4-competitor.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-24</lastmod></url>
     <url><loc>https://paralivesguide.wiki/articles/paralives-early-access-missing-features-avoid-buyers-remorse.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-24</lastmod></url>
+
+    <!-- May 26 articles (new) -->
+    <url><loc>https://paralivesguide.wiki/articles/paralives-beginner-guide-10min-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/paralives-best-graphics-settings-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/paralives-build-mode-tutorial-box-to-mansion.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/paralives-needs-system-explained-happy-para.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/paralives-career-guide-which-job-most-money-2026.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-26</lastmod></url>
+    <url><loc>https://paralivesguide.wiki/articles/paralives-social-relationships-guide-friends-romance-family.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-05-26</lastmod></url>
 </urlset>
